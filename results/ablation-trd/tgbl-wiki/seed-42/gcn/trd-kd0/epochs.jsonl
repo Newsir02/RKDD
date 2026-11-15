@@ -1,0 +1,1 @@
+{"epoch": 1, "losses": {"total": 0.9234729254117715, "task": 0.9005789262621727, "logit": 0.0, "rkd": 0.022893999201778283, "teacher_delta_energy": 0.02245810624774657, "student_delta_energy": 0.00037023636380436936}, "validation": {"metric": "mrr", "mrr": 0.4432852130672229, "official": true, "events": 23621}, "train_seconds": 29.93385043926537}
