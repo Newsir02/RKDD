@@ -1,7 +1,7 @@
 # 结构交互蒸馏实验运行状态
 
 - 启动时间：2026-11-15 16:25:40（服务器本地时间）
-- 当前快照：2026-11-15 17:56（服务器本地时间）
+- 当前快照：2026-11-15 17:57（服务器本地时间）
 - 当前状态：运行中，无 failure
 - 代码版本指纹：`1208b42886b3badc13e8ffd8b220590cb9ba95fa01cb356541e7235954a23076`
 
@@ -29,13 +29,14 @@ Review、Coin、Comment 的全量训练在当前算力下不可行（Review 单 
 
 ## 3. 当前进度
 
-总体：**4 / 42** 个 run 完成，0 failure。
+总体：**5 / 42** 个 run 完成，0 failure。
 
 | run | 状态 |
 |---|---|
 | `seed-42/teacher-tgn` | 完成 |
 | `seed-42/gcn/supervised` | 完成 |
-| `seed-42/gcn/tgn/logits` | 运行中 |
+| `seed-42/gcn/tgn/logits` | 完成 |
+| `seed-42/gcn/tgn/trd` | 运行中 |
 | `seed-44/teacher-tgn` | 完成 |
 | `seed-44/gcn/supervised` | 完成 |
 | `seed-44/gcn/tgn/logits` | 运行中 |
@@ -49,6 +50,7 @@ Review、Coin、Comment 的全量训练在当前算力下不可行（Review 单 
 | tgbl-wiki | TGN | — | teacher | 44 | 0.6125 | 0.6424 | 20 / 40 | 1923.1 |
 | tgbl-wiki | — | GCN | supervised | 42 | 0.4359 | 0.4967 | 8 / 28 | 307.6 |
 | tgbl-wiki | — | GCN | supervised | 44 | 0.4408 | 0.5231 | 20 / 40 | 582.5 |
+| tgbl-wiki | TGN | GCN | logits | 42 | 0.4621 | 0.5239 | 23 / 43 | 850.8 |
 
 ## 4. 运行进程
 
