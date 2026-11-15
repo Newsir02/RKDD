@@ -8,6 +8,9 @@ from torch.nn import functional as F
 
 from .kd import logit_kd_loss
 from .temporal_delta import TemporalDeltaDistillation
+from .score_delta import ScoreDeltaDistillation
+from .structure_interaction import StructureInteractionObjective
+from .temporal_paper_adaptations import TEMPORAL_PAPER_METHODS, TemporalPaperObjective
 
 
 class StandardizedLogitKD(nn.Module):
@@ -132,11 +135,19 @@ class PaperObjective(nn.Module):
 
 
 METHODS = ("supervised", "logits", "dkd", "rkd_distance", "rkd_angle",
-           "logit_standard", "nosmog_rsd", "trd")
+           "logit_standard", "nosmog_rsd", "trd", "trd_score", "structure_interaction") + TEMPORAL_PAPER_METHODS
 
 
 def make_objective(method, student_dim, teacher_dim, temperature=2.0,
-                   kd_weight=1.0, relation_weight=1.0, trd_mode="temporal"):
+                   kd_weight=1.0, relation_weight=1.0, trd_mode="temporal", score_delta_warmup=0,
+                   score_delta_gate=False, *, structure_mode="temporal", structure_huber_beta=1.):
+    if method == "structure_interaction":
+        return StructureInteractionObjective(relation_weight, structure_mode, structure_huber_beta)
+    if method in TEMPORAL_PAPER_METHODS:
+        return TemporalPaperObjective(method, student_dim, teacher_dim, temperature, kd_weight, relation_weight)
     if method == "trd":
         return TemporalDeltaDistillation(kd_weight, relation_weight, temperature, trd_mode)
+    if method == "trd_score":
+        return ScoreDeltaDistillation(kd_weight, relation_weight, temperature, trd_mode,
+                                      score_delta_warmup, score_delta_gate)
     return PaperObjective(method, student_dim, teacher_dim, temperature, kd_weight, relation_weight)

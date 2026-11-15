@@ -4,14 +4,14 @@ Temporal Relation Delta Distillation（TRD）用于连续时间图上的链接�
 
 ## 论文基线与统一比较入口
 
-新增 `benchmark.py` 支持 TGN/TGAT/GraphMixer 教师、普通 GCN/GraphSAGE 学生、Logits KD、DKD、RKD-D/A、Logit Standardization、NOSMOG-RSD 组件适配及原 TRD。原训练入口继续保留。论文出处、完整复现与组件适配的区别见 [distillation_methods.md](distillation_methods.md)；五数据集、三种子、705 次运行计划及公平性协议见 [comparison_experiments.md](comparison_experiments.md)。验证证据见 [validation.md](docs/research/validation.md)。
+当前论文方法为[时序结构交互关系蒸馏](distillation_methods.md)。`benchmark.py` 支持四视图训练和零目标消融。正式矩阵包含四数据集 TGN→GCN 主对比和仅运行新方法的不同教师实验，详见 [comparison_experiments.md](comparison_experiments.md)。四个[论文组件对照](docs/research/temporal_baselines.md)共享同一 TGN→GCN 协议。
 
 ```bash
-python -m experiments.matrix --config configs/smoke.json --output-root results/my-smoke --execute
-python -m experiments.summarize results/my-smoke --output results/my-smoke/summary.csv
+python -m experiments.matrix --config configs/structure_smoke.json --output-root results/my-structure-smoke --execute
+python -m experiments.summarize results/my-structure-smoke --seeds 42 --output results/my-structure-smoke/summary.csv
 ```
 
-以上是合成数据验证。真实五数据集的完整性能结果尚未生成。
+以上是合成数据验证。正式配置为 `configs/structure_comparison.json`，四数据集全量性能结果待运行。
 
 ## 环境
 

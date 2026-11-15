@@ -6,6 +6,8 @@
 - 当前正式结果只有 **Wiki v2、seed42**；Review 只有 1-epoch 教师调试；Coin / Comment / Flight 未进行模型训练。
 - 所有数字均来自实际 `result.json`，未虚构未运行的实验。
 
+后续补充见 [Wiki v2 实验诊断与 TRD 改进](docs/research/trd_wiki_analysis.md)。本报告保留服务器快照的正式数值，本地小规模结果在补充文档单列。
+
 ---
 
 ## 1. 环境与验证
@@ -195,7 +197,7 @@ TGB 官方 `tgbl-wiki-v2` 排行榜使用 **all possible negative destinations**
 | TGAT | 0.141 ± 0.007 | 0.6450 |
 | GraphMixer | 0.118 ± 0.002 | 0.6654 |
 
-**不能直接比较。** 我检查了本地负例文件：`tgbl-wiki_val_ns_v2.pkl` / `test_ns_v2.pkl` 中每个正例只有 **999 个负例**，不是排行榜的 all-negative 协议。项目中的 `official=true` 只表示使用 TGB evaluator + 官方负例文件，不等同于排行榜提交协议。
+**候选协议补充核对。** Wiki v2 有 1,000 个目的页面。本地重新下载的官方 `val_ns_v2.pkl` 和 `test_ns_v2.pkl` 中，每个切分的 23,619 个查询有 999 个负例，另外 2 个查询有 998 个负例。逐条核验均覆盖完整目的域，排除了同一源节点和时间戳的所有正例。负例数与排行榜的 all-negative 描述一致。服务器快照的负例文件哈希还有待核对。[TGB 官方 Wiki v2 评估协议](https://tgb.complexdatalab.com/docs/leader_linkprop/#leaderboard-for-tgbl-wiki-v2)
 
 此外：
 
@@ -203,7 +205,7 @@ TGB 官方 `tgbl-wiki-v2` 排行榜使用 **all possible negative destinations**
 - 只有 seed42，没有多 seed 均值±标准差；
 - 未完成原论文排行榜复现。
 
-因此当前教师**不能判定为达到官方排行榜标准**；0.61–0.67 的表面数字高于榜单同名模型，主要来自协议/实现差异，不能据此声称超过官方 TGN/TGAT/GraphMixer。
+当前数值与榜单同名模型之间的差距还需要结合具体骨干实现、历史更新批次和模型选择流程解释。单凭负例数无法判定差距由候选协议引起。
 
 ---
 

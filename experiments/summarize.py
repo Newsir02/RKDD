@@ -39,6 +39,8 @@ def summarize(root, expected_seeds=(42, 43, 44)):
             raise ValueError(f"Duplicate seed results for {key[:4]}")
         values = [r["test"][key[4]] for r in rows]
         summary.append(dict(dataset=key[0], teacher=key[1], student=key[2], method=key[3], metric=key[4],
+                            structure_mode=(rows[0]["config"].get("structure_mode", "temporal")
+                                            if key[3] == "structure_interaction" else None),
                             official=key[5], configuration=key[6], source_hash=key[7],
                             data_signature=key[9], dataset_version=key[10],
                             n=len(rows), seeds=",".join(map(str, sorted(seeds))),

@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from util.history_mask import history_mask, visible_history
+
 from typing import Dict, Optional
 
 import torch
@@ -384,6 +386,12 @@ class PyGTGNTeacher(nn.Module):
         candidates = batch["candidates"].long()
         query_nodes = torch.cat([source, candidates.flatten()]).unique()
         node_ids, edge_index, event_ids = self.neighbor_loader(query_nodes)
+        excluded_events = history_mask(batch)
+        if excluded_events is not None:
+            # Intervene on explicit query-neighborhood messages. The TGN memory
+            # summarizes the true prefix and stays fixed across all four views.
+            keep = visible_history(event_ids, excluded_events)
+            edge_index, event_ids = edge_index[:, keep], event_ids[keep]
         self.association[node_ids] = torch.arange(
             node_ids.numel(),
             device=node_ids.device,

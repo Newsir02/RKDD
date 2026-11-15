@@ -1,0 +1,19 @@
+{
+  "design": "structure",
+  "datasets": ["synthetic"],
+  "multi_teacher_datasets": ["synthetic"],
+  "ablation_dataset": "synthetic",
+  "seeds": [42],
+  "methods": [
+    "logits", "trd", "dyngkd_structure", "distill2vec_latent",
+    "lightst_adaptive", "lkd4dytag_edge", "structure_interaction"
+  ],
+  "common": {
+    "device": "cpu", "num_nodes": 12, "num_events": 144, "num_candidates": 4,
+    "batch_size": 8, "teacher_epochs": 1, "student_epochs": 1, "patience": 0,
+    "feature_dim": 4, "edge_feature_dim": 2, "teacher_hidden": 8, "student_hidden": 6,
+    "student_blocks": 2, "student_neighbors": 8, "temporal_neighbors": 12,
+    "time_dim": 4, "relation_dim": 8, "latency_batches": 1,
+    "structure_group_events": 2, "structure_queries_per_batch": 4
+  }
+}

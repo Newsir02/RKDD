@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from util.history_mask import history_mask, visible_history
+
 from typing import Dict, Optional
 
 import torch
@@ -219,9 +221,10 @@ class GraphMixerTeacher(nn.Module):
         query_ids: Tensor,
         query_time: Tensor,
         return_relations: bool = False,
+        excluded_events: Tensor | None = None,
     ) -> tuple[Tensor, Dict[str, Tensor]]:
         neighbor_ids, event_ids = self.neighbor_loader.query(query_ids)
-        mask = event_ids >= 0
+        mask = visible_history(event_ids, excluded_events)
         safe_ids = event_ids.clamp_min(0)
         event_time = self.event_times[safe_ids]
         span = self.time_span
@@ -285,9 +288,10 @@ class GraphMixerTeacher(nn.Module):
         source = batch["src"].long()
         candidates = batch["candidates"].long()
         query_time = batch["event_time"]
-        source_state, source_relations = self._aggregate(source, query_time, return_relations)
+        excluded_events = history_mask(batch)
+        source_state, source_relations = self._aggregate(source, query_time, return_relations, excluded_events)
         candidate_state, _ = self._aggregate(
-            candidates, query_time.unsqueeze(-1).expand_as(candidates)
+            candidates, query_time.unsqueeze(-1).expand_as(candidates), excluded_events=excluded_events
         )
         expanded_source = source_state.unsqueeze(1).expand_as(candidate_state)
         score_inputs = torch.cat(

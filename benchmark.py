@@ -16,11 +16,13 @@ import torch
 
 import train
 from loss.paper_baselines import METHODS, make_objective
+from loss.score_delta import ScoreDeltaDistillation
 from model.snapshot_gnn import SnapshotGNN
 from dataset.benchmark_loader import replace_candidate_loaders
 from util import save_model_checkpoint, model_parameter_summary
 from util.seed import seed_everything
 from util.temporal_delta_training import train_temporal_delta_epoch
+from util.structure_interaction_training import train_structure_epoch
 from util.training import move_to_device
 
 
@@ -74,6 +76,9 @@ def parse_args(argv=None):
     parser.add_argument("--teacher-checkpoint", default="")
     parser.add_argument("--device", default="cpu")
     parser.add_argument("--trd-mode", choices=tuple(train.TemporalDeltaDistillation.MODES), default="temporal")
+    parser.add_argument("--student-node-ids", action=argparse.BooleanOptionalAction, default=True)
+    parser.add_argument("--score-delta-gate", action="store_true")
+    parser.add_argument("--structure-mode", choices=("temporal", "zero"), default="temporal")
     parser.add_argument("--quick", action="store_true")
     parser.add_argument("--no-tgb-download", dest="tgb_download", action="store_false", default=True)
     for name, default in {"seed":42, "batch_size":128, "num_candidates":16,
@@ -82,11 +87,13 @@ def parse_args(argv=None):
                           "time_dim":16, "relation_dim":64, "teacher_epochs":100,
                           "student_epochs":100, "patience":20, "latency_batches":20,
                           "feature_dim":16, "edge_feature_dim":16, "num_nodes":256,
-                          "num_events":3000, "max_real_events":0, "dkd_warmup":20}.items():
+                          "num_events":3000, "max_real_events":0, "dkd_warmup":20,
+                          "score_delta_warmup":0, "structure_group_events":2,
+                          "structure_queries_per_batch":4}.items():
         parser.add_argument("--" + name.replace("_", "-"), type=int, default=default)
     for name, default in {"teacher_lr":.001, "student_lr":.001, "weight_decay":0.,
                           "grad_clip":5., "temperature":2., "kd_weight":1., "relation_weight":1.,
-                          "dkd_alpha":1., "dkd_beta":8.}.items():
+                          "dkd_alpha":1., "dkd_beta":8., "structure_huber_beta":1.}.items():
         parser.add_argument("--" + name.replace("_", "-"), type=float, default=default)
     valid = {action.dest for action in parser._actions}
     if set(config) - valid:
@@ -107,6 +114,12 @@ def parse_args(argv=None):
         parser.error("student stage requires --method supervised")
     if chosen.stage == "distill" and (chosen.method == "supervised" or not chosen.teacher_checkpoint):
         parser.error("distill requires a non-supervised method and --teacher-checkpoint")
+    if chosen.method == "trd_score" and chosen.trd_mode not in ScoreDeltaDistillation.MODES:
+        parser.error("trd_score supports temporal, reverse, zero and shuffled modes")
+    if not all(isinstance(flag, bool) for flag in (chosen.student_node_ids, chosen.score_delta_gate)):
+        parser.error("student_node_ids and score_delta_gate must be JSON booleans")
+    if chosen.score_delta_gate and chosen.method != "trd_score":
+        parser.error("score_delta_gate requires --method trd_score")
     base = train.parse_args([])
     base.__dict__.update(vars(chosen))
     base.benchmark_method = chosen.method
@@ -121,6 +134,8 @@ def parse_args(argv=None):
             parser.error(f"{name} must be positive")
     if base.num_candidates < 2 or base.patience < 0 or base.max_real_events < 0 or base.dkd_warmup < 0:
         parser.error("Invalid candidate count/patience/max_real_events")
+    if base.score_delta_warmup < 0:
+        parser.error("score_delta_warmup must be non-negative")
     for name in ("temperature", "grad_clip", "teacher_lr", "student_lr"):
         if not math.isfinite(getattr(base, name)) or getattr(base, name) <= 0:
             parser.error(f"{name} must be finite and positive")
@@ -129,6 +144,17 @@ def parse_args(argv=None):
             parser.error(f"{name} must be finite and nonnegative")
     if base.quick:
         train.apply_quick_configuration(base)
+    if min(base.structure_group_events, base.structure_queries_per_batch) < 1:
+        parser.error("Structure group and query budgets must be positive")
+    if not math.isfinite(base.structure_huber_beta) or base.structure_huber_beta <= 0:
+        parser.error("structure_huber_beta must be finite and positive")
+    if base.structure_mode == "zero" and base.benchmark_method != "structure_interaction":
+        parser.error("structure_mode zero requires --method structure_interaction")
+    if base.benchmark_method == "structure_interaction":
+        if base.stage != "distill" or base.student_model != "gcn" or base.student_blocks < 2:
+            parser.error("Structure interaction requires distill stage and a GCN with at least two layers")
+        if base.relation_weight <= 0:
+            parser.error("Structure interaction requires positive relation_weight")
     return base
 
 
@@ -220,11 +246,13 @@ def run(args):
         seed_everything(args.seed)
         np.random.seed(args.seed)
         model = SnapshotGNN(bundle.node_features, args.student_model, args.student_hidden,
-                            args.student_blocks, args.student_neighbors).to(device)
+                            args.student_blocks, args.student_neighbors, args.student_node_ids).to(device)
         if teacher is not None:
             objective = make_objective(args.benchmark_method, args.student_hidden, args.teacher_hidden,
                                        args.temperature, args.kd_weight, args.relation_weight,
-                                       args.trd_mode).to(device)
+                                       args.trd_mode, args.score_delta_warmup, args.score_delta_gate,
+                                       structure_mode=args.structure_mode,
+                                       structure_huber_beta=args.structure_huber_beta).to(device)
             if args.benchmark_method == "dkd":
                 objective.dkd_alpha, objective.dkd_beta = args.dkd_alpha, args.dkd_beta
                 objective.dkd_warmup = args.dkd_warmup
@@ -249,8 +277,14 @@ def run(args):
             losses = {"task": train.train_teacher_epoch(model, training, optimizer, device, args.grad_clip)}
         elif teacher is None:
             losses = {"task": train.train_supervised_student_epoch(model, training, optimizer, device, args.grad_clip)}
+        elif args.benchmark_method == "structure_interaction":
+            losses = train_structure_epoch(model, teacher, objective, training, optimizer, device, args, epoch)
         else:
-            losses = train_temporal_delta_epoch(model, teacher, objective, training, optimizer, device, args.grad_clip)
+            model.return_structure = args.benchmark_method == "dyngkd_structure"
+            try:
+                losses = train_temporal_delta_epoch(model, teacher, objective, training, optimizer, device, args.grad_clip)
+            finally:
+                model.return_structure = False
         synchronize(device)
         elapsed = time.perf_counter() - start
         train_seconds += elapsed
@@ -320,6 +354,15 @@ def run(args):
               "latency": latency, "environment": {"python": platform.python_version(),
                   "platform": platform.platform(), "device": str(device), "packages": packages,
                   "gpu": torch.cuda.get_device_name(device) if device.type == "cuda" else None}}
+    if args.benchmark_method == "structure_interaction":
+        result["structure_intervention"] = {
+            "teacher_scope": "explicit_neighborhood_fixed_memory" if args.teacher_arch == "tgn"
+                             else "explicit_neighborhood_no_refill",
+            "student_scope": "locked_recent_k_no_refill",
+            "mode": args.structure_mode,
+            "last_epoch_eligible_fraction": losses["eligible_fraction"],
+            "last_epoch_distilled_fraction": losses["distilled_fraction"],
+        }
     write_json(output / "result.json", result)
     return result
 

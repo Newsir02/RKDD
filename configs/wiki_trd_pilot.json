@@ -1,0 +1,13 @@
+{
+  "datasets": ["tgbl-wiki"],
+  "teachers": ["tgn"],
+  "students": ["gcn", "sage"],
+  "seeds": [42, 43, 44],
+  "methods": ["logits", "trd", "trd_score"],
+  "common": {
+    "device": "cuda", "data_root": "datasets", "tgb_download": false,
+    "max_real_events": 4000, "teacher_epochs": 3, "student_epochs": 4,
+    "patience": 0, "batch_size": 128, "num_candidates": 16,
+    "score_delta_warmup": 3, "latency_batches": 2
+  }
+}

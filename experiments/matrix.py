@@ -8,6 +8,8 @@ import benchmark
 
 
 def build_jobs(config, output_root):
+    if config.get("design") == "structure":
+        return build_structure_jobs(config, output_root)
     root = Path(output_root)
     jobs = []
     datasets, teachers, students, seeds = (config[k] for k in ("datasets", "teachers", "students", "seeds"))
@@ -34,6 +36,59 @@ def build_jobs(config, output_root):
                         jobs.append({**common, "stage": "distill", "method": method, "student_model": student,
                                      "teacher_arch": teacher, "teacher_checkpoint": str(checkpoint),
                                      "output_dir": str(directory)})
+    return jobs
+
+
+def build_structure_jobs(config, output_root):
+    """Compare distillers with TGN, vary only teachers for the proposed method."""
+    root = Path(output_root)
+    datasets, seeds, methods = (config[key] for key in ("datasets", "seeds", "methods"))
+    multi_datasets = config.get("multi_teacher_datasets", datasets)
+    ablation_dataset = config["ablation_dataset"]
+    if not datasets or len(set(datasets)) != len(datasets):
+        raise ValueError("Structure design requires distinct datasets")
+    if not seeds or len(set(seeds)) != len(seeds):
+        raise ValueError("Structure design requires distinct seeds")
+    if len(set(multi_datasets)) != len(multi_datasets) or not set(multi_datasets) <= set(datasets):
+        raise ValueError("Multi-teacher datasets must be a distinct subset of main datasets")
+    if ablation_dataset not in datasets:
+        raise ValueError("Ablation dataset must be in the main datasets")
+    if "structure_interaction" not in methods or len(set(methods)) != len(methods):
+        raise ValueError("Main methods must be distinct and include structure_interaction")
+    common = config["common"]
+    if config.get("students", ["gcn"]) != ["gcn"] or common.get("student_model", "gcn") != "gcn":
+        raise ValueError("Structure design uses GCN as its only student")
+    if config.get("teachers", ["tgn"]) != ["tgn"] or common.get("teacher_arch", "tgn") != "tgn":
+        raise ValueError("Structure design uses TGN as the main teacher")
+    if common.get("structure_mode", "temporal") != "temporal":
+        raise ValueError("Main structure mode must be temporal; a separate zero control is generated")
+
+    main_config = {
+        "datasets": datasets, "teachers": ["tgn"], "students": ["gcn"],
+        "seeds": seeds, "methods": methods,
+        "common": {**common, "student_model": "gcn", "structure_mode": "temporal"},
+    }
+    jobs = build_jobs(main_config, root / "main")
+    teacher_jobs = {(job["dataset"], job["seed"]): job for job in jobs if job["stage"] == "teacher"}
+    full_jobs = {(job["dataset"], job["seed"]): job for job in jobs if job["method"] == "structure_interaction"}
+    # Compare each teacher independently, with a distinct checkpoint. The TGN
+    # row is already in main, so re-use it alongside the two supplemental rows.
+    for dataset in multi_datasets:
+        for seed in seeds:
+            directory = root / "multi-teacher" / dataset / f"seed-{seed}"
+            for arch in ("tgat", "graphmixer"):
+                teacher_dir = directory / f"teacher-{arch}"
+                student_dir = directory / "gcn" / arch / "structure_interaction"
+                jobs.append({**teacher_jobs[dataset, seed], "teacher_arch": arch,
+                             "output_dir": str(teacher_dir)})
+                jobs.append({**full_jobs[dataset, seed], "teacher_arch": arch,
+                             "teacher_checkpoint": str(teacher_dir / "teacher.pt"),
+                             "output_dir": str(student_dir)})
+    # Keep the TGN checkpoint and sampling fixed when replacing the target.
+    for seed in seeds:
+        directory = root / "ablation" / ablation_dataset / f"seed-{seed}" / "gcn" / "tgn" / "zero"
+        jobs.append({**full_jobs[ablation_dataset, seed], "structure_mode": "zero",
+                     "output_dir": str(directory)})
     return jobs
 
 

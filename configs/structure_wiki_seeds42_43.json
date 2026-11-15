@@ -1,0 +1,19 @@
+{
+  "design": "structure",
+  "datasets": ["tgbl-wiki"],
+  "multi_teacher_datasets": ["tgbl-wiki"],
+  "ablation_dataset": "tgbl-wiki",
+  "seeds": [42, 43],
+  "methods": [
+    "logits", "trd", "dyngkd_structure", "distill2vec_latent",
+    "lightst_adaptive", "lkd4dytag_edge", "structure_interaction"
+  ],
+  "common": {
+    "device": "cuda", "data_root": "datasets", "tgb_download": false,
+    "batch_size": 128, "num_candidates": 16, "teacher_epochs": 100, "student_epochs": 100,
+    "patience": 20, "teacher_hidden": 64, "student_hidden": 32, "student_blocks": 2,
+    "student_neighbors": 8, "temporal_neighbors": 24, "teacher_lr": 0.001, "student_lr": 0.001,
+    "weight_decay": 0.0, "temperature": 2.0, "kd_weight": 1.0, "relation_weight": 1.0,
+    "structure_group_events": 2, "structure_queries_per_batch": 4
+  }
+}
