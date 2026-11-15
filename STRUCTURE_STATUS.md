@@ -59,7 +59,7 @@ Review、Coin、Comment 的全量训练在当前算力下不可行（Review 单 
 | matrix A | 2298079 | `configs/structure_wiki_seeds42_43.json` | 0 | 28 runs |
 | matrix B | 2298080 | `configs/structure_wiki_seed44.json` | 1 | 14 runs |
 
-两个进程共用输出根 `results/structure-main`，但 run 目录按 seed 分开，不重叠。日志为：
+两个进程共用输出根 `results/structure-main`，但 run 目录按 seed 分开，不重叠。两个进程都会写 `results/structure-main/manifest.json`，该文件不是合并清单；每个 run 的 `job.json`、`config.json`、`result.json` 才是权威记录。日志为：
 
 - `results/structure-main-a.log`
 - `results/structure-main-b.log`
