@@ -1,0 +1,21 @@
+[
+  {
+    "dataset": "tgbl-wiki",
+    "backend_name": "tgbl-wiki",
+    "dataset_version": 2,
+    "py_tgb": "2.2.0",
+    "nodes": 9227,
+    "events": 157474,
+    "train": 110232,
+    "val": 23621,
+    "test": 23621,
+    "metric": "mrr",
+    "official": true,
+    "data_signature": "15fdb2d49b464e85ef08881639cf9e644af9b6c527576159b9c01c11c82110df",
+    "time_scale": {
+      "origin": 0.0,
+      "span": 1862652.0
+    },
+    "negative_file_sha256": {}
+  }
+]

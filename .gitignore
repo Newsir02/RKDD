@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Data and local dependencies (too large for Git)
+datasets/
+checkpoints/
+.download-parts/
+.download-test/
+.benchmark-deps/
+.test-deps/
+.pip-cache/
+.pytest-tmp/
+.test-tmp-*/
+
+# Model weights and archives
+*.pt
+*.pth
+*.zip
+*.tar
+*.tar.gz
+*.pkl
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Experiment metadata is kept:
+# results/**/result.json, epochs.jsonl, config.json, job.json,
+# summary*.csv, *.log, *.md, data manifests

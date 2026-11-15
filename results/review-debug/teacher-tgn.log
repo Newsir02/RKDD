@@ -1,0 +1,1 @@
+{"epoch": 1, "losses": {"task": 1.2564387375473691}, "validation": {"metric": "mrr", "mrr": 0.2979389519408206, "official": true, "events": 730784}, "train_seconds": 6308.228171078488}

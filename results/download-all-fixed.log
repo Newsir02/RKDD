@@ -1,0 +1,123 @@
+tgbl-coin-v2.zip: expected=1284466067 chunks=307 jobs=32
+tgbl-coin-v2.zip: complete=0 pending=307
+tgbl-coin-v2.zip: parts 10/307 done, failed=0
+tgbl-coin-v2.zip: parts 20/307 done, failed=0
+tgbl-coin-v2.zip: parts 30/307 done, failed=0
+tgbl-coin-v2.zip: parts 40/307 done, failed=0
+tgbl-coin-v2.zip: parts 50/307 done, failed=0
+  retry part=part_00085.bin attempt=1 have=0 err=expected HTTP 206, got 408
+tgbl-coin-v2.zip: parts 60/307 done, failed=0
+tgbl-coin-v2.zip: parts 70/307 done, failed=0
+tgbl-coin-v2.zip: parts 80/307 done, failed=0
+tgbl-coin-v2.zip: parts 90/307 done, failed=0
+tgbl-coin-v2.zip: parts 100/307 done, failed=0
+tgbl-coin-v2.zip: parts 110/307 done, failed=0
+tgbl-coin-v2.zip: parts 120/307 done, failed=0
+tgbl-coin-v2.zip: parts 130/307 done, failed=0
+tgbl-coin-v2.zip: parts 140/307 done, failed=0
+tgbl-coin-v2.zip: parts 150/307 done, failed=0
+tgbl-coin-v2.zip: parts 160/307 done, failed=0
+tgbl-coin-v2.zip: parts 170/307 done, failed=0
+tgbl-coin-v2.zip: parts 180/307 done, failed=0
+tgbl-coin-v2.zip: parts 190/307 done, failed=0
+tgbl-coin-v2.zip: parts 200/307 done, failed=0
+tgbl-coin-v2.zip: parts 210/307 done, failed=0
+tgbl-coin-v2.zip: parts 220/307 done, failed=0
+tgbl-coin-v2.zip: parts 230/307 done, failed=0
+tgbl-coin-v2.zip: parts 240/307 done, failed=0
+tgbl-coin-v2.zip: parts 250/307 done, failed=0
+tgbl-coin-v2.zip: parts 260/307 done, failed=0
+tgbl-coin-v2.zip: parts 270/307 done, failed=0
+tgbl-coin-v2.zip: parts 280/307 done, failed=0
+tgbl-coin-v2.zip: parts 290/307 done, failed=0
+tgbl-coin-v2.zip: parts 300/307 done, failed=0
+tgbl-coin-v2.zip: parts 307/307 done, failed=0
+tgbl-coin-v2.zip: assembled=1284466067 expected=1284466067
+tgbl-coin-v2.zip: sha256=64887fa5548cea21d57a5d6e7d4acba28673ccf9017f8db30156d9dad5a1e100
+tgbl-coin-v2.zip: extracted to datasets/tgbl_coin
+coin exit=0
+tgbl-comment.zip: expected=1710634236 chunks=408 jobs=32
+tgbl-comment.zip: complete=0 pending=408
+tgbl-comment.zip: parts 10/408 done, failed=0
+tgbl-comment.zip: parts 20/408 done, failed=0
+tgbl-comment.zip: parts 30/408 done, failed=0
+tgbl-comment.zip: parts 40/408 done, failed=0
+tgbl-comment.zip: parts 50/408 done, failed=0
+tgbl-comment.zip: parts 60/408 done, failed=0
+tgbl-comment.zip: parts 70/408 done, failed=0
+tgbl-comment.zip: parts 80/408 done, failed=0
+tgbl-comment.zip: parts 90/408 done, failed=0
+tgbl-comment.zip: parts 100/408 done, failed=0
+tgbl-comment.zip: parts 110/408 done, failed=0
+tgbl-comment.zip: parts 120/408 done, failed=0
+tgbl-comment.zip: parts 130/408 done, failed=0
+tgbl-comment.zip: parts 140/408 done, failed=0
+tgbl-comment.zip: parts 150/408 done, failed=0
+tgbl-comment.zip: parts 160/408 done, failed=0
+tgbl-comment.zip: parts 170/408 done, failed=0
+tgbl-comment.zip: parts 180/408 done, failed=0
+tgbl-comment.zip: parts 190/408 done, failed=0
+tgbl-comment.zip: parts 200/408 done, failed=0
+tgbl-comment.zip: parts 210/408 done, failed=0
+tgbl-comment.zip: parts 220/408 done, failed=0
+tgbl-comment.zip: parts 230/408 done, failed=0
+tgbl-comment.zip: parts 240/408 done, failed=0
+tgbl-comment.zip: parts 250/408 done, failed=0
+tgbl-comment.zip: parts 260/408 done, failed=0
+tgbl-comment.zip: parts 270/408 done, failed=0
+tgbl-comment.zip: parts 280/408 done, failed=0
+tgbl-comment.zip: parts 290/408 done, failed=0
+tgbl-comment.zip: parts 300/408 done, failed=0
+tgbl-comment.zip: parts 310/408 done, failed=0
+tgbl-comment.zip: parts 320/408 done, failed=0
+tgbl-comment.zip: parts 330/408 done, failed=0
+tgbl-comment.zip: parts 340/408 done, failed=0
+tgbl-comment.zip: parts 350/408 done, failed=0
+tgbl-comment.zip: parts 360/408 done, failed=0
+tgbl-comment.zip: parts 370/408 done, failed=0
+tgbl-comment.zip: parts 380/408 done, failed=0
+tgbl-comment.zip: parts 390/408 done, failed=0
+tgbl-comment.zip: parts 400/408 done, failed=0
+tgbl-comment.zip: parts 408/408 done, failed=0
+tgbl-comment.zip: assembled=1710634236 expected=1710634236
+tgbl-comment.zip: sha256=a18b588d4beb3e0d6b7ff57273cc47e3c5451e1d2a42c8cc97d8d8a351bb7367
+tgbl-comment.zip: extracted to datasets/tgbl_comment
+comment exit=0
+tgbl-flight-v2.zip: expected=1281890984 chunks=306 jobs=32
+tgbl-flight-v2.zip: complete=0 pending=306
+tgbl-flight-v2.zip: parts 10/306 done, failed=0
+tgbl-flight-v2.zip: parts 20/306 done, failed=0
+tgbl-flight-v2.zip: parts 30/306 done, failed=0
+tgbl-flight-v2.zip: parts 40/306 done, failed=0
+tgbl-flight-v2.zip: parts 50/306 done, failed=0
+tgbl-flight-v2.zip: parts 60/306 done, failed=0
+tgbl-flight-v2.zip: parts 70/306 done, failed=0
+tgbl-flight-v2.zip: parts 80/306 done, failed=0
+tgbl-flight-v2.zip: parts 90/306 done, failed=0
+tgbl-flight-v2.zip: parts 100/306 done, failed=0
+tgbl-flight-v2.zip: parts 110/306 done, failed=0
+tgbl-flight-v2.zip: parts 120/306 done, failed=0
+tgbl-flight-v2.zip: parts 130/306 done, failed=0
+tgbl-flight-v2.zip: parts 140/306 done, failed=0
+tgbl-flight-v2.zip: parts 150/306 done, failed=0
+tgbl-flight-v2.zip: parts 160/306 done, failed=0
+tgbl-flight-v2.zip: parts 170/306 done, failed=0
+tgbl-flight-v2.zip: parts 180/306 done, failed=0
+tgbl-flight-v2.zip: parts 190/306 done, failed=0
+tgbl-flight-v2.zip: parts 200/306 done, failed=0
+tgbl-flight-v2.zip: parts 210/306 done, failed=0
+tgbl-flight-v2.zip: parts 220/306 done, failed=0
+tgbl-flight-v2.zip: parts 230/306 done, failed=0
+tgbl-flight-v2.zip: parts 240/306 done, failed=0
+tgbl-flight-v2.zip: parts 250/306 done, failed=0
+tgbl-flight-v2.zip: parts 260/306 done, failed=0
+tgbl-flight-v2.zip: parts 270/306 done, failed=0
+tgbl-flight-v2.zip: parts 280/306 done, failed=0
+tgbl-flight-v2.zip: parts 290/306 done, failed=0
+tgbl-flight-v2.zip: parts 300/306 done, failed=0
+tgbl-flight-v2.zip: parts 306/306 done, failed=0
+tgbl-flight-v2.zip: assembled=1281890984 expected=1281890984
+tgbl-flight-v2.zip: sha256=673ed605256f7a80945e28023a6b75e1855f0782859de577868856865b50fea9
+tgbl-flight-v2.zip: extracted to datasets/tgbl_flight
+flight exit=0
+ALL_DONE coin=0 comment=0 flight=0

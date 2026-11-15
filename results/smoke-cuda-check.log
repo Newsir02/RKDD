@@ -1,0 +1,283 @@
+Planned 141 runs; execute=True
+Run 1/141: results/smoke-cuda-check/synthetic/seed-42/teacher-tgn
+{"epoch": 1, "losses": {"task": 1.093252420425415}, "validation": {"mrr": 0.75, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0921536684036255, "official": false}, "train_seconds": 0.6761900717392564}
+Run 2/141: results/smoke-cuda-check/synthetic/seed-42/teacher-tgat
+{"epoch": 1, "losses": {"task": 1.0984621942043304}, "validation": {"mrr": 0.4583333432674408, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1088104248046875, "official": false}, "train_seconds": 0.09105621464550495}
+Run 3/141: results/smoke-cuda-check/synthetic/seed-42/teacher-graphmixer
+{"epoch": 1, "losses": {"task": 1.180051028728485}, "validation": {"mrr": 0.5416666865348816, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1066694259643555, "official": false}, "train_seconds": 0.05605631601065397}
+Run 4/141: results/smoke-cuda-check/synthetic/seed-42/gcn/supervised
+{"epoch": 1, "losses": {"task": 1.1258383393287659}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.152604579925537, "official": false}, "train_seconds": 0.06385638285428286}
+Run 5/141: results/smoke-cuda-check/synthetic/seed-42/gcn/tgn/logits
+{"epoch": 1, "losses": {"total": 1.1488225758075714, "task": 1.1251582503318787, "kd": 0.023664332926273346, "relation": 0.0}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1492583751678467, "official": false}, "train_seconds": 0.0939248213544488}
+Run 6/141: results/smoke-cuda-check/synthetic/seed-42/gcn/tgn/dkd
+{"epoch": 1, "losses": {"total": 1.1291612088680267, "task": 1.1257799863815308, "kd": 0.003381199319846928, "relation": 0.0}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.152109146118164, "official": false}, "train_seconds": 0.07222368754446507}
+Run 7/141: results/smoke-cuda-check/synthetic/seed-42/gcn/tgn/rkd_distance
+{"epoch": 1, "losses": {"total": 1.341405212879181, "task": 1.1253604292869568, "kd": 0.023774296045303345, "relation": 0.19227047078311443}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.150478720664978, "official": false}, "train_seconds": 0.1502187205478549}
+Run 8/141: results/smoke-cuda-check/synthetic/seed-42/gcn/tgn/rkd_angle
+{"epoch": 1, "losses": {"total": 1.333276778459549, "task": 1.1249753832817078, "kd": 0.02365194261074066, "relation": 0.18464947864413261}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1485024690628052, "official": false}, "train_seconds": 0.08440442010760307}
+Run 9/141: results/smoke-cuda-check/synthetic/seed-42/gcn/tgn/logit_standard
+{"epoch": 1, "losses": {"total": 1.8279505968093872, "task": 1.1265990138053894, "kd": 0.701351523399353, "relation": 0.0}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.157884120941162, "official": false}, "train_seconds": 0.053681664168834686}
+Run 10/141: results/smoke-cuda-check/synthetic/seed-42/gcn/tgn/nosmog_rsd
+{"epoch": 1, "losses": {"total": 3.3889431953430176, "task": 1.1256100237369537, "kd": 0.02370186150074005, "relation": 2.2396312723867595}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1493370532989502, "official": false}, "train_seconds": 0.05689977388828993}
+Run 11/141: results/smoke-cuda-check/synthetic/seed-42/gcn/tgn/trd
+{"epoch": 1, "losses": {"total": 1.2358110845088959, "task": 1.1256145536899567, "logit": 0.02379555255174637, "rkd": 0.08640095964074135, "teacher_delta_energy": 0.11970274150371552, "student_delta_energy": 0.006497734536727269}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1524533033370972, "official": false}, "train_seconds": 0.08664262760430574}
+Run 12/141: results/smoke-cuda-check/synthetic/seed-42/gcn/tgat/logits
+{"epoch": 1, "losses": {"total": 1.149695247411728, "task": 1.1251811683177948, "kd": 0.024514108896255493, "relation": 0.0}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1491097211837769, "official": false}, "train_seconds": 0.04960755165666342}
+Run 13/141: results/smoke-cuda-check/synthetic/seed-42/gcn/tgat/dkd
+{"epoch": 1, "losses": {"total": 1.1294679939746857, "task": 1.1257600486278534, "kd": 0.003707970870891586, "relation": 0.0}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1520785093307495, "official": false}, "train_seconds": 0.060109818354249}
+Run 14/141: results/smoke-cuda-check/synthetic/seed-42/gcn/tgat/rkd_distance
+{"epoch": 1, "losses": {"total": 1.3111233413219452, "task": 1.1252607107162476, "kd": 0.024486184120178223, "relation": 0.16137642972171307}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1498279571533203, "official": false}, "train_seconds": 0.09629188198596239}
+Run 15/141: results/smoke-cuda-check/synthetic/seed-42/gcn/tgat/rkd_angle
+{"epoch": 1, "losses": {"total": 1.299741506576538, "task": 1.1250074803829193, "kd": 0.024481281638145447, "relation": 0.15025275573134422}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1485391855239868, "official": false}, "train_seconds": 0.0814644992351532}
+Run 16/141: results/smoke-cuda-check/synthetic/seed-42/gcn/tgat/logit_standard
+{"epoch": 1, "losses": {"total": 1.9789298474788666, "task": 1.1255485713481903, "kd": 0.8533812984824181, "relation": 0.0}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1515889167785645, "official": false}, "train_seconds": 0.0548793887719512}
+Run 17/141: results/smoke-cuda-check/synthetic/seed-42/gcn/tgat/nosmog_rsd
+{"epoch": 1, "losses": {"total": 4.519818365573883, "task": 1.1251208186149597, "kd": 0.024337679147720337, "relation": 3.370359778404236}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1463682651519775, "official": false}, "train_seconds": 0.05293448828160763}
+Run 18/141: results/smoke-cuda-check/synthetic/seed-42/gcn/tgat/trd
+{"epoch": 1, "losses": {"total": 1.1555313766002655, "task": 1.1255773305892944, "logit": 0.024652913212776184, "rkd": 0.00530111762600427, "teacher_delta_energy": 0.0015784156930749305, "student_delta_energy": 0.006497734536727269}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.152142882347107, "official": false}, "train_seconds": 0.07831329479813576}
+Run 19/141: results/smoke-cuda-check/synthetic/seed-42/gcn/graphmixer/logits
+{"epoch": 1, "losses": {"total": 1.1572317779064178, "task": 1.125069499015808, "kd": 0.032162293791770935, "relation": 0.0}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.148619294166565, "official": false}, "train_seconds": 0.05131535604596138}
+Run 20/141: results/smoke-cuda-check/synthetic/seed-42/gcn/graphmixer/dkd
+{"epoch": 1, "losses": {"total": 1.1328697800636292, "task": 1.1257465183734894, "kd": 0.007123245624825358, "relation": 0.0}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1518583297729492, "official": false}, "train_seconds": 0.0734731862321496}
+Run 21/141: results/smoke-cuda-check/synthetic/seed-42/gcn/graphmixer/rkd_distance
+{"epoch": 1, "losses": {"total": 1.323452115058899, "task": 1.124998539686203, "kd": 0.03239645063877106, "relation": 0.16605713590979576}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.150515079498291, "official": false}, "train_seconds": 0.09595622681081295}
+Run 22/141: results/smoke-cuda-check/synthetic/seed-42/gcn/graphmixer/rkd_angle
+{"epoch": 1, "losses": {"total": 1.3127845525741577, "task": 1.1248092651367188, "kd": 0.03211921453475952, "relation": 0.15585610643029213}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1480826139450073, "official": false}, "train_seconds": 0.08178227860480547}
+Run 23/141: results/smoke-cuda-check/synthetic/seed-42/gcn/graphmixer/logit_standard
+{"epoch": 1, "losses": {"total": 1.7640407979488373, "task": 1.1270217597484589, "kd": 0.6370190605521202, "relation": 0.0}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1574068069458008, "official": false}, "train_seconds": 0.05380854569375515}
+Run 24/141: results/smoke-cuda-check/synthetic/seed-42/gcn/graphmixer/nosmog_rsd
+{"epoch": 1, "losses": {"total": 2.1183895468711853, "task": 1.1249418258666992, "kd": 0.031967759132385254, "relation": 0.9614799171686172}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1457337141036987, "official": false}, "train_seconds": 0.05160058196634054}
+Run 25/141: results/smoke-cuda-check/synthetic/seed-42/gcn/graphmixer/trd
+{"epoch": 1, "losses": {"total": 1.1632507145404816, "task": 1.1254476308822632, "logit": 0.0323304682970047, "rkd": 0.00547260235180147, "teacher_delta_energy": 0.002307518928622206, "student_delta_energy": 0.006497734536727664}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1517211198806763, "official": false}, "train_seconds": 0.07738281227648258}
+Run 26/141: results/smoke-cuda-check/synthetic/seed-42/sage/supervised
+{"epoch": 1, "losses": {"task": 1.1091325879096985}, "validation": {"mrr": 0.5, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1916718482971191, "official": false}, "train_seconds": 0.0339096961542964}
+Run 27/141: results/smoke-cuda-check/synthetic/seed-42/sage/tgn/logits
+{"epoch": 1, "losses": {"total": 1.1122474372386932, "task": 1.1090588569641113, "kd": 0.003188595175743103, "relation": 0.0}, "validation": {"mrr": 0.5, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1907764673233032, "official": false}, "train_seconds": 0.05541662033647299}
+Run 28/141: results/smoke-cuda-check/synthetic/seed-42/sage/tgn/dkd
+{"epoch": 1, "losses": {"total": 1.1099325716495514, "task": 1.109116941690445, "kd": 0.0008156161893566605, "relation": 0.0}, "validation": {"mrr": 0.5, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1911842823028564, "official": false}, "train_seconds": 0.07640893384814262}
+Run 29/141: results/smoke-cuda-check/synthetic/seed-42/sage/tgn/rkd_distance
+{"epoch": 1, "losses": {"total": 1.2823004126548767, "task": 1.108673095703125, "kd": 0.003141939640045166, "relation": 0.17048537731170654}, "validation": {"mrr": 0.5, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1758754253387451, "official": false}, "train_seconds": 0.09554698318243027}
+Run 30/141: results/smoke-cuda-check/synthetic/seed-42/sage/tgn/rkd_angle
+{"epoch": 1, "losses": {"total": 1.2558777928352356, "task": 1.1083298027515411, "kd": 0.0030802637338638306, "relation": 0.14446774870157242}, "validation": {"mrr": 0.5, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1762802600860596, "official": false}, "train_seconds": 0.08939947839826345}
+Run 31/141: results/smoke-cuda-check/synthetic/seed-42/sage/tgn/logit_standard
+{"epoch": 1, "losses": {"total": 1.8476362228393555, "task": 1.112405002117157, "kd": 0.7352311909198761, "relation": 0.0}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1932175159454346, "official": false}, "train_seconds": 0.0686333142220974}
+Run 32/141: results/smoke-cuda-check/synthetic/seed-42/sage/tgn/nosmog_rsd
+{"epoch": 1, "losses": {"total": 3.853418290615082, "task": 1.108886569738388, "kd": 0.0031836628913879395, "relation": 2.7413480177056044}, "validation": {"mrr": 0.5, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1941410303115845, "official": false}, "train_seconds": 0.07568329200148582}
+Run 33/141: results/smoke-cuda-check/synthetic/seed-42/sage/tgn/trd
+{"epoch": 1, "losses": {"total": 1.2508589029312134, "task": 1.1100244522094727, "logit": 0.0032096952199935913, "rkd": 0.13762477226555347, "teacher_delta_energy": 0.11970274150371552, "student_delta_energy": 0.07466054459412892}, "validation": {"mrr": 0.5, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1786160469055176, "official": false}, "train_seconds": 0.08598764706403017}
+Run 34/141: results/smoke-cuda-check/synthetic/seed-42/sage/tgat/logits
+{"epoch": 1, "losses": {"total": 1.1127677261829376, "task": 1.1089771389961243, "kd": 0.0037905797362327576, "relation": 0.0}, "validation": {"mrr": 0.5, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1902496814727783, "official": false}, "train_seconds": 0.051386334002017975}
+Run 35/141: results/smoke-cuda-check/synthetic/seed-42/sage/tgat/dkd
+{"epoch": 1, "losses": {"total": 1.1103587746620178, "task": 1.1090912818908691, "kd": 0.001267468418518547, "relation": 0.0}, "validation": {"mrr": 0.5, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1910426616668701, "official": false}, "train_seconds": 0.06355575565248728}
+Run 36/141: results/smoke-cuda-check/synthetic/seed-42/sage/tgat/rkd_distance
+{"epoch": 1, "losses": {"total": 1.242885947227478, "task": 1.108814150094986, "kd": 0.0037566199898719788, "relation": 0.13031520321965218}, "validation": {"mrr": 0.5, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1825658082962036, "official": false}, "train_seconds": 0.10498530883342028}
+Run 37/141: results/smoke-cuda-check/synthetic/seed-42/sage/tgat/rkd_angle
+{"epoch": 1, "losses": {"total": 1.21626216173172, "task": 1.1085326373577118, "kd": 0.003704175353050232, "relation": 0.10402531363070011}, "validation": {"mrr": 0.5, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1776962280273438, "official": false}, "train_seconds": 0.0817529084160924}
+Run 38/141: results/smoke-cuda-check/synthetic/seed-42/sage/tgat/logit_standard
+{"epoch": 1, "losses": {"total": 1.9716665148735046, "task": 1.1093455255031586, "kd": 0.8623209819197655, "relation": 0.0}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1848177909851074, "official": false}, "train_seconds": 0.05688569135963917}
+Run 39/141: results/smoke-cuda-check/synthetic/seed-42/sage/tgat/nosmog_rsd
+{"epoch": 1, "losses": {"total": 5.252104640007019, "task": 1.1073874533176422, "kd": 0.0037181153893470764, "relation": 4.140999138355255}, "validation": {"mrr": 0.5, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1937458515167236, "official": false}, "train_seconds": 0.05637427885085344}
+Run 40/141: results/smoke-cuda-check/synthetic/seed-42/sage/tgat/trd
+{"epoch": 1, "losses": {"total": 1.1655304431915283, "task": 1.1089175045490265, "logit": 0.0037849992513656616, "rkd": 0.0528279272839427, "teacher_delta_energy": 0.0015784156930749305, "student_delta_energy": 0.07371037142972152}, "validation": {"mrr": 0.5, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1920603513717651, "official": false}, "train_seconds": 0.09654183592647314}
+Run 41/141: results/smoke-cuda-check/synthetic/seed-42/sage/graphmixer/logits
+{"epoch": 1, "losses": {"total": 1.1202183961868286, "task": 1.1089725494384766, "kd": 0.011245861649513245, "relation": 0.0}, "validation": {"mrr": 0.5, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1903650760650635, "official": false}, "train_seconds": 0.05221405625343323}
+Run 42/141: results/smoke-cuda-check/synthetic/seed-42/sage/graphmixer/dkd
+{"epoch": 1, "losses": {"total": 1.1125423312187195, "task": 1.1090512573719025, "kd": 0.0034910542199213523, "relation": 0.0}, "validation": {"mrr": 0.5, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1910667419433594, "official": false}, "train_seconds": 0.07240184396505356}
+Run 43/141: results/smoke-cuda-check/synthetic/seed-42/sage/graphmixer/rkd_distance
+{"epoch": 1, "losses": {"total": 1.2368977963924408, "task": 1.1092320084571838, "kd": 0.01123136281967163, "relation": 0.11643443442881107}, "validation": {"mrr": 0.5, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1855673789978027, "official": false}, "train_seconds": 0.09300135169178247}
+Run 44/141: results/smoke-cuda-check/synthetic/seed-42/sage/graphmixer/rkd_angle
+{"epoch": 1, "losses": {"total": 1.2095910608768463, "task": 1.10824853181839, "kd": 0.011183910071849823, "relation": 0.09015859477221966}, "validation": {"mrr": 0.5, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1768015623092651, "official": false}, "train_seconds": 0.0790878888219595}
+Run 45/141: results/smoke-cuda-check/synthetic/seed-42/sage/graphmixer/logit_standard
+{"epoch": 1, "losses": {"total": 1.7114054262638092, "task": 1.110355019569397, "kd": 0.6010503694415092, "relation": 0.0}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1825560331344604, "official": false}, "train_seconds": 0.056142126210033894}
+Run 46/141: results/smoke-cuda-check/synthetic/seed-42/sage/graphmixer/nosmog_rsd
+{"epoch": 1, "losses": {"total": 2.539957672357559, "task": 1.1074295938014984, "kd": 0.01126648485660553, "relation": 1.4212616384029388}, "validation": {"mrr": 0.5, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1909658908843994, "official": false}, "train_seconds": 0.05503724608570337}
+Run 47/141: results/smoke-cuda-check/synthetic/seed-42/sage/graphmixer/trd
+{"epoch": 1, "losses": {"total": 1.1757118105888367, "task": 1.1089099645614624, "logit": 0.011240117251873016, "rkd": 0.05556171201169491, "teacher_delta_energy": 0.002307518928622206, "student_delta_energy": 0.07371407250563304}, "validation": {"mrr": 0.5, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1919262409210205, "official": false}, "train_seconds": 0.082259276881814}
+Run 48/141: results/smoke-cuda-check/synthetic/seed-43/teacher-tgn
+{"epoch": 1, "losses": {"task": 1.0972434878349304}, "validation": {"mrr": 0.5416666865348816, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.1080647706985474, "official": false}, "train_seconds": 0.06437765527516603}
+Run 49/141: results/smoke-cuda-check/synthetic/seed-43/teacher-tgat
+{"epoch": 1, "losses": {"task": 1.1003155410289764}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0985604524612427, "official": false}, "train_seconds": 0.06039717327803373}
+Run 50/141: results/smoke-cuda-check/synthetic/seed-43/teacher-graphmixer
+{"epoch": 1, "losses": {"task": 1.1029320061206818}, "validation": {"mrr": 0.5833333730697632, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.091652750968933, "official": false}, "train_seconds": 0.053490014746785164}
+Run 51/141: results/smoke-cuda-check/synthetic/seed-43/gcn/supervised
+{"epoch": 1, "losses": {"task": 1.058228313922882}, "validation": {"mrr": 0.75, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0554845333099365, "official": false}, "train_seconds": 0.038703251630067825}
+Run 52/141: results/smoke-cuda-check/synthetic/seed-43/gcn/tgn/logits
+{"epoch": 1, "losses": {"total": 1.060880869626999, "task": 1.058546930551529, "kd": 0.0023339390754699707, "relation": 0.0}, "validation": {"mrr": 0.75, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0560097694396973, "official": false}, "train_seconds": 0.05095911864191294}
+Run 53/141: results/smoke-cuda-check/synthetic/seed-43/gcn/tgn/dkd
+{"epoch": 1, "losses": {"total": 1.0589711666107178, "task": 1.0583714544773102, "kd": 0.0005997151165502146, "relation": 0.0}, "validation": {"mrr": 0.75, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0555105209350586, "official": false}, "train_seconds": 0.06328689213842154}
+Run 54/141: results/smoke-cuda-check/synthetic/seed-43/gcn/tgn/rkd_distance
+{"epoch": 1, "losses": {"total": 1.1549691259860992, "task": 1.0583022236824036, "kd": 0.00239688903093338, "relation": 0.09427003934979439}, "validation": {"mrr": 0.75, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0555543899536133, "official": false}, "train_seconds": 0.09449860826134682}
+Run 55/141: results/smoke-cuda-check/synthetic/seed-43/gcn/tgn/rkd_angle
+{"epoch": 1, "losses": {"total": 1.1793471276760101, "task": 1.058659940958023, "kd": 0.0023754239082336426, "relation": 0.11831173859536648}, "validation": {"mrr": 0.75, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0570826530456543, "official": false}, "train_seconds": 0.08865529112517834}
+Run 56/141: results/smoke-cuda-check/synthetic/seed-43/gcn/tgn/logit_standard
+{"epoch": 1, "losses": {"total": 1.6325353682041168, "task": 1.0570136606693268, "kd": 0.5755217373371124, "relation": 0.0}, "validation": {"mrr": 0.75, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0605396032333374, "official": false}, "train_seconds": 0.061545852571725845}
+Run 57/141: results/smoke-cuda-check/synthetic/seed-43/gcn/tgn/nosmog_rsd
+{"epoch": 1, "losses": {"total": 1.997621327638626, "task": 1.0593209266662598, "kd": 0.0022215768694877625, "relation": 0.9360787868499756}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0647224187850952, "official": false}, "train_seconds": 0.05658645834773779}
+Run 58/141: results/smoke-cuda-check/synthetic/seed-43/gcn/tgn/trd
+{"epoch": 1, "losses": {"total": 1.1069106459617615, "task": 1.0587020516395569, "logit": 0.002328440546989441, "rkd": 0.04588018078356981, "teacher_delta_energy": 0.058322363843520485, "student_delta_energy": 0.005193477312180524}, "validation": {"mrr": 0.75, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0566331148147583, "official": false}, "train_seconds": 0.0770772835239768}
+Run 59/141: results/smoke-cuda-check/synthetic/seed-43/gcn/tgat/logits
+{"epoch": 1, "losses": {"total": 1.0606082677841187, "task": 1.0585590600967407, "kd": 0.0020492151379585266, "relation": 0.0}, "validation": {"mrr": 0.75, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0559263229370117, "official": false}, "train_seconds": 0.04899908788502216}
+Run 60/141: results/smoke-cuda-check/synthetic/seed-43/gcn/tgat/dkd
+{"epoch": 1, "losses": {"total": 1.0589154362678528, "task": 1.0583760738372803, "kd": 0.0005393888895923737, "relation": 0.0}, "validation": {"mrr": 0.75, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0554759502410889, "official": false}, "train_seconds": 0.07087342906743288}
+Run 61/141: results/smoke-cuda-check/synthetic/seed-43/gcn/tgat/rkd_distance
+{"epoch": 1, "losses": {"total": 1.2117061018943787, "task": 1.0581702888011932, "kd": 0.0020855963230133057, "relation": 0.15145017951726913}, "validation": {"mrr": 0.75, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0557196140289307, "official": false}, "train_seconds": 0.09458332136273384}
+Run 62/141: results/smoke-cuda-check/synthetic/seed-43/gcn/tgat/rkd_angle
+{"epoch": 1, "losses": {"total": 1.1782912015914917, "task": 1.0584536790847778, "kd": 0.0020777955651283264, "relation": 0.11775975301861763}, "validation": {"mrr": 0.75, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.056882619857788, "official": false}, "train_seconds": 0.08228056784719229}
+Run 63/141: results/smoke-cuda-check/synthetic/seed-43/gcn/tgat/logit_standard
+{"epoch": 1, "losses": {"total": 1.6785783767700195, "task": 1.0560687482357025, "kd": 0.622509628534317, "relation": 0.0}, "validation": {"mrr": 0.75, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0584155321121216, "official": false}, "train_seconds": 0.06265393365174532}
+Run 64/141: results/smoke-cuda-check/synthetic/seed-43/gcn/tgat/nosmog_rsd
+{"epoch": 1, "losses": {"total": 1.8533483147621155, "task": 1.0594070553779602, "kd": 0.0019759535789489746, "relation": 0.7919653207063675}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0634671449661255, "official": false}, "train_seconds": 0.05387685727328062}
+Run 65/141: results/smoke-cuda-check/synthetic/seed-43/gcn/tgat/trd
+{"epoch": 1, "losses": {"total": 1.0662582516670227, "task": 1.0586631894111633, "logit": 0.002045944333076477, "rkd": 0.005549127410631627, "teacher_delta_energy": 0.0025174501352012157, "student_delta_energy": 0.005194050720698821}, "validation": {"mrr": 0.75, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.055967926979065, "official": false}, "train_seconds": 0.08618785534054041}
+Run 66/141: results/smoke-cuda-check/synthetic/seed-43/gcn/graphmixer/logits
+{"epoch": 1, "losses": {"total": 1.0609843730926514, "task": 1.05852872133255, "kd": 0.0024556517601013184, "relation": 0.0}, "validation": {"mrr": 0.75, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0560415983200073, "official": false}, "train_seconds": 0.05551508907228708}
+Run 67/141: results/smoke-cuda-check/synthetic/seed-43/gcn/graphmixer/dkd
+{"epoch": 1, "losses": {"total": 1.0590419471263885, "task": 1.0583693385124207, "kd": 0.0006726235114911105, "relation": 0.0}, "validation": {"mrr": 0.75, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0555264949798584, "official": false}, "train_seconds": 0.06290628388524055}
+Run 68/141: results/smoke-cuda-check/synthetic/seed-43/gcn/graphmixer/rkd_distance
+{"epoch": 1, "losses": {"total": 1.1504825949668884, "task": 1.0585963129997253, "kd": 0.0024983733892440796, "relation": 0.08938787877559662}, "validation": {"mrr": 0.75, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0560643672943115, "official": false}, "train_seconds": 0.09324052091687918}
+Run 69/141: results/smoke-cuda-check/synthetic/seed-43/gcn/graphmixer/rkd_angle
+{"epoch": 1, "losses": {"total": 1.138287752866745, "task": 1.0585475265979767, "kd": 0.0024979785084724426, "relation": 0.07724223099648952}, "validation": {"mrr": 0.75, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0572729110717773, "official": false}, "train_seconds": 0.07620303332805634}
+Run 70/141: results/smoke-cuda-check/synthetic/seed-43/gcn/graphmixer/logit_standard
+{"epoch": 1, "losses": {"total": 1.6104507148265839, "task": 1.058990240097046, "kd": 0.5514604859054089, "relation": 0.0}, "validation": {"mrr": 0.625, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.0706415176391602, "official": false}, "train_seconds": 0.0501914219930768}
+Run 71/141: results/smoke-cuda-check/synthetic/seed-43/gcn/graphmixer/nosmog_rsd
+{"epoch": 1, "losses": {"total": 2.9712829887866974, "task": 1.0588184297084808, "kd": 0.002411685883998871, "relation": 1.9100528955459595}, "validation": {"mrr": 0.625, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.0648319721221924, "official": false}, "train_seconds": 0.05241750553250313}
+Run 72/141: results/smoke-cuda-check/synthetic/seed-43/gcn/graphmixer/trd
+{"epoch": 1, "losses": {"total": 1.065800130367279, "task": 1.0586382448673248, "logit": 0.00245058536529541, "rkd": 0.004711277928436175, "teacher_delta_energy": 0.0010667154250162032, "student_delta_energy": 0.005194198320774983}, "validation": {"mrr": 0.75, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.056172251701355, "official": false}, "train_seconds": 0.0919577507302165}
+Run 73/141: results/smoke-cuda-check/synthetic/seed-43/sage/supervised
+{"epoch": 1, "losses": {"task": 1.099952071905136}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1388672590255737, "official": false}, "train_seconds": 0.03393944259732962}
+Run 74/141: results/smoke-cuda-check/synthetic/seed-43/sage/tgn/logits
+{"epoch": 1, "losses": {"total": 1.1009596586227417, "task": 1.0999735891819, "kd": 0.0009860694408416748, "relation": 0.0}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.138745903968811, "official": false}, "train_seconds": 0.05353338364511728}
+Run 75/141: results/smoke-cuda-check/synthetic/seed-43/sage/tgn/dkd
+{"epoch": 1, "losses": {"total": 1.1003237962722778, "task": 1.09995436668396, "kd": 0.0003694322040246334, "relation": 0.0}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1388120651245117, "official": false}, "train_seconds": 0.0643362682312727}
+Run 76/141: results/smoke-cuda-check/synthetic/seed-43/sage/tgn/rkd_distance
+{"epoch": 1, "losses": {"total": 1.1968740224838257, "task": 1.1003305912017822, "kd": 0.0009921342134475708, "relation": 0.09555129520595074}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1396328210830688, "official": false}, "train_seconds": 0.10557954665273428}
+Run 77/141: results/smoke-cuda-check/synthetic/seed-43/sage/tgn/rkd_angle
+{"epoch": 1, "losses": {"total": 1.2190969586372375, "task": 1.1004045009613037, "kd": 0.0010070577263832092, "relation": 0.11768539622426033}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1402673721313477, "official": false}, "train_seconds": 0.08467961475253105}
+Run 78/141: results/smoke-cuda-check/synthetic/seed-43/sage/tgn/logit_standard
+{"epoch": 1, "losses": {"total": 1.6631925106048584, "task": 1.099282145500183, "kd": 0.5639104098081589, "relation": 0.0}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1410547494888306, "official": false}, "train_seconds": 0.05682881362736225}
+Run 79/141: results/smoke-cuda-check/synthetic/seed-43/sage/tgn/nosmog_rsd
+{"epoch": 1, "losses": {"total": 1.5925139784812927, "task": 1.0999496281147003, "kd": 0.0009813979268074036, "relation": 0.4915829971432686}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1393461227416992, "official": false}, "train_seconds": 0.05802767816931009}
+Run 80/141: results/smoke-cuda-check/synthetic/seed-43/sage/tgn/trd
+{"epoch": 1, "losses": {"total": 1.1366617977619171, "task": 1.1002236902713776, "logit": 0.0009941011667251587, "rkd": 0.0354440133087337, "teacher_delta_energy": 0.058322363843520485, "student_delta_energy": 0.03199399262666702}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1396300792694092, "official": false}, "train_seconds": 0.09196066483855247}
+Run 81/141: results/smoke-cuda-check/synthetic/seed-43/sage/tgat/logits
+{"epoch": 1, "losses": {"total": 1.1009288132190704, "task": 1.0999628901481628, "kd": 0.0009659081697463989, "relation": 0.0}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1387596130371094, "official": false}, "train_seconds": 0.05812443420290947}
+Run 82/141: results/smoke-cuda-check/synthetic/seed-43/sage/tgat/dkd
+{"epoch": 1, "losses": {"total": 1.1003709137439728, "task": 1.099954605102539, "kd": 0.0004162982222624123, "relation": 0.0}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.138808012008667, "official": false}, "train_seconds": 0.060044231824576855}
+Run 83/141: results/smoke-cuda-check/synthetic/seed-43/sage/tgat/rkd_distance
+{"epoch": 1, "losses": {"total": 1.240144968032837, "task": 1.100223034620285, "kd": 0.0009886100888252258, "relation": 0.1389333140105009}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1392755508422852, "official": false}, "train_seconds": 0.0961305433884263}
+Run 84/141: results/smoke-cuda-check/synthetic/seed-43/sage/tgat/rkd_angle
+{"epoch": 1, "losses": {"total": 1.2126969695091248, "task": 1.1004081964492798, "kd": 0.0009910091757774353, "relation": 0.11129775457084179}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1401312351226807, "official": false}, "train_seconds": 0.08074570074677467}
+Run 85/141: results/smoke-cuda-check/synthetic/seed-43/sage/tgat/logit_standard
+{"epoch": 1, "losses": {"total": 1.8303695321083069, "task": 1.1021408140659332, "kd": 0.7282287180423737, "relation": 0.0}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1405162811279297, "official": false}, "train_seconds": 0.06290836818516254}
+Run 86/141: results/smoke-cuda-check/synthetic/seed-43/sage/tgat/nosmog_rsd
+{"epoch": 1, "losses": {"total": 1.6357486248016357, "task": 1.100629597902298, "kd": 0.0009766072034835815, "relation": 0.5341423600912094}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1383169889450073, "official": false}, "train_seconds": 0.06753631122410297}
+Run 87/141: results/smoke-cuda-check/synthetic/seed-43/sage/tgat/trd
+{"epoch": 1, "losses": {"total": 1.12285515666008, "task": 1.1000709533691406, "logit": 0.0009585320949554443, "rkd": 0.021825671195983887, "teacher_delta_energy": 0.0025174501352012157, "student_delta_energy": 0.03165189052621523}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1391292810440063, "official": false}, "train_seconds": 0.08396613132208586}
+Run 88/141: results/smoke-cuda-check/synthetic/seed-43/sage/graphmixer/logits
+{"epoch": 1, "losses": {"total": 1.1016129553318024, "task": 1.099975436925888, "kd": 0.0016375109553337097, "relation": 0.0}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1387815475463867, "official": false}, "train_seconds": 0.05063369870185852}
+Run 89/141: results/smoke-cuda-check/synthetic/seed-43/sage/graphmixer/dkd
+{"epoch": 1, "losses": {"total": 1.100343644618988, "task": 1.0999664068222046, "kd": 0.0003772281233977992, "relation": 0.0}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1388188600540161, "official": false}, "train_seconds": 0.058913121931254864}
+Run 90/141: results/smoke-cuda-check/synthetic/seed-43/sage/graphmixer/rkd_distance
+{"epoch": 1, "losses": {"total": 1.2038933038711548, "task": 1.100203037261963, "kd": 0.0016542524099349976, "relation": 0.10203604027628899}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1391427516937256, "official": false}, "train_seconds": 0.09154556319117546}
+Run 91/141: results/smoke-cuda-check/synthetic/seed-43/sage/graphmixer/rkd_angle
+{"epoch": 1, "losses": {"total": 1.2008552551269531, "task": 1.1003898680210114, "kd": 0.0016672611236572266, "relation": 0.09879815764725208}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1400784254074097, "official": false}, "train_seconds": 0.0818137489259243}
+Run 92/141: results/smoke-cuda-check/synthetic/seed-43/sage/graphmixer/logit_standard
+{"epoch": 1, "losses": {"total": 1.785682886838913, "task": 1.1025138795375824, "kd": 0.6831690073013306, "relation": 0.0}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1434129476547241, "official": false}, "train_seconds": 0.06193829420953989}
+Run 93/141: results/smoke-cuda-check/synthetic/seed-43/sage/graphmixer/nosmog_rsd
+{"epoch": 1, "losses": {"total": 3.047557234764099, "task": 1.1004545986652374, "kd": 0.00166398286819458, "relation": 1.9454387351870537}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1399385929107666, "official": false}, "train_seconds": 0.061824279837310314}
+Run 94/141: results/smoke-cuda-check/synthetic/seed-43/sage/graphmixer/trd
+{"epoch": 1, "losses": {"total": 1.124709576368332, "task": 1.1000747084617615, "logit": 0.0016275793313980103, "rkd": 0.023007293231785297, "teacher_delta_energy": 0.0010667154250162032, "student_delta_energy": 0.03165395185351372}, "validation": {"mrr": 0.375, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.1392446756362915, "official": false}, "train_seconds": 0.08189880009740591}
+Run 95/141: results/smoke-cuda-check/synthetic/seed-44/teacher-tgn
+{"epoch": 1, "losses": {"task": 1.0953406393527985}, "validation": {"mrr": 0.5, "hits@1": 0.0, "hits@3": 1.0, "metric": "mrr", "loss": 1.0882484912872314, "official": false}, "train_seconds": 0.05389402527362108}
+Run 96/141: results/smoke-cuda-check/synthetic/seed-44/teacher-tgat
+{"epoch": 1, "losses": {"task": 1.1680494546890259}, "validation": {"mrr": 0.75, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0722101926803589, "official": false}, "train_seconds": 0.05947114992886782}
+Run 97/141: results/smoke-cuda-check/synthetic/seed-44/teacher-graphmixer
+{"epoch": 1, "losses": {"task": 1.103626698255539}, "validation": {"mrr": 0.5416666865348816, "hits@1": 0.25, "hits@3": 1.0, "metric": "mrr", "loss": 1.0948818922042847, "official": false}, "train_seconds": 0.044176654890179634}
+Run 98/141: results/smoke-cuda-check/synthetic/seed-44/gcn/supervised
+{"epoch": 1, "losses": {"task": 1.1099348962306976}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0890566110610962, "official": false}, "train_seconds": 0.036846463568508625}
+Run 99/141: results/smoke-cuda-check/synthetic/seed-44/gcn/tgn/logits
+{"epoch": 1, "losses": {"total": 1.1111747026443481, "task": 1.1099272072315216, "kd": 0.001247495412826538, "relation": 0.0}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0892153978347778, "official": false}, "train_seconds": 0.0631091520190239}
+Run 100/141: results/smoke-cuda-check/synthetic/seed-44/gcn/tgn/dkd
+{"epoch": 1, "losses": {"total": 1.110205888748169, "task": 1.1099345684051514, "kd": 0.0002713128942559706, "relation": 0.0}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.089097023010254, "official": false}, "train_seconds": 0.059997422620654106}
+Run 101/141: results/smoke-cuda-check/synthetic/seed-44/gcn/tgn/rkd_distance
+{"epoch": 1, "losses": {"total": 1.2342129349708557, "task": 1.110397219657898, "kd": 0.0012429729104042053, "relation": 0.12257272936403751}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0917813777923584, "official": false}, "train_seconds": 0.09482171013951302}
+Run 102/141: results/smoke-cuda-check/synthetic/seed-44/gcn/tgn/rkd_angle
+{"epoch": 1, "losses": {"total": 1.2482321560382843, "task": 1.109647125005722, "kd": 0.0012417733669281006, "relation": 0.13734323531389236}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.08880615234375, "official": false}, "train_seconds": 0.08258317317813635}
+Run 103/141: results/smoke-cuda-check/synthetic/seed-44/gcn/tgn/logit_standard
+{"epoch": 1, "losses": {"total": 1.6772327721118927, "task": 1.1109130680561066, "kd": 0.5663196668028831, "relation": 0.0}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0936808586120605, "official": false}, "train_seconds": 0.06396459601819515}
+Run 104/141: results/smoke-cuda-check/synthetic/seed-44/gcn/tgn/nosmog_rsd
+{"epoch": 1, "losses": {"total": 1.6312279999256134, "task": 1.1094898879528046, "kd": 0.0012382492423057556, "relation": 0.520499849691987}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0878616571426392, "official": false}, "train_seconds": 0.055377861484885216}
+Run 105/141: results/smoke-cuda-check/synthetic/seed-44/gcn/tgn/trd
+{"epoch": 1, "losses": {"total": 1.2379976511001587, "task": 1.1100202202796936, "logit": 0.001246139407157898, "rkd": 0.1267312988638878, "teacher_delta_energy": 0.14563838640848795, "student_delta_energy": 0.08385415359710653}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0897800922393799, "official": false}, "train_seconds": 0.0786880450323224}
+Run 106/141: results/smoke-cuda-check/synthetic/seed-44/gcn/tgat/logits
+{"epoch": 1, "losses": {"total": 1.114473134279251, "task": 1.1099188327789307, "kd": 0.0045543089509010315, "relation": 0.0}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0889793634414673, "official": false}, "train_seconds": 0.0486974623054266}
+Run 107/141: results/smoke-cuda-check/synthetic/seed-44/gcn/tgat/dkd
+{"epoch": 1, "losses": {"total": 1.110952079296112, "task": 1.1099281013011932, "kd": 0.001023968343361048, "relation": 0.0}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0890438556671143, "official": false}, "train_seconds": 0.061124375090003014}
+Run 108/141: results/smoke-cuda-check/synthetic/seed-44/gcn/tgat/rkd_distance
+{"epoch": 1, "losses": {"total": 1.28362637758255, "task": 1.1108976006507874, "kd": 0.004529573023319244, "relation": 0.16819922998547554}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0921061038970947, "official": false}, "train_seconds": 0.10134975984692574}
+Run 109/141: results/smoke-cuda-check/synthetic/seed-44/gcn/tgat/rkd_angle
+{"epoch": 1, "losses": {"total": 1.2352898120880127, "task": 1.1100276112556458, "kd": 0.004538029432296753, "relation": 0.12072415836155415}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0894958972930908, "official": false}, "train_seconds": 0.08366298582404852}
+Run 110/141: results/smoke-cuda-check/synthetic/seed-44/gcn/tgat/logit_standard
+{"epoch": 1, "losses": {"total": 1.5010609328746796, "task": 1.1107048690319061, "kd": 0.39035607874393463, "relation": 0.0}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.090550422668457, "official": false}, "train_seconds": 0.05165644269436598}
+Run 111/141: results/smoke-cuda-check/synthetic/seed-44/gcn/tgat/nosmog_rsd
+{"epoch": 1, "losses": {"total": 1.5360133349895477, "task": 1.1096901893615723, "kd": 0.004534922540187836, "relation": 0.4217882342636585}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0876058340072632, "official": false}, "train_seconds": 0.053267707116901875}
+Run 112/141: results/smoke-cuda-check/synthetic/seed-44/gcn/tgat/trd
+{"epoch": 1, "losses": {"total": 1.1865013539791107, "task": 1.1100843250751495, "logit": 0.004553541541099548, "rkd": 0.07186348084360361, "teacher_delta_energy": 0.012361711317983767, "student_delta_energy": 0.08356801653280854}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0895212888717651, "official": false}, "train_seconds": 0.081081323325634}
+Run 113/141: results/smoke-cuda-check/synthetic/seed-44/gcn/graphmixer/logits
+{"epoch": 1, "losses": {"total": 1.110516607761383, "task": 1.1099189817905426, "kd": 0.000597640872001648, "relation": 0.0}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0891324281692505, "official": false}, "train_seconds": 0.04707294888794422}
+Run 114/141: results/smoke-cuda-check/synthetic/seed-44/gcn/graphmixer/dkd
+{"epoch": 1, "losses": {"total": 1.1101118624210358, "task": 1.1099311709403992, "kd": 0.00018070563601213507, "relation": 0.0}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0890710353851318, "official": false}, "train_seconds": 0.06885839160531759}
+Run 115/141: results/smoke-cuda-check/synthetic/seed-44/gcn/graphmixer/rkd_distance
+{"epoch": 1, "losses": {"total": 1.279243677854538, "task": 1.110505223274231, "kd": 0.0006026402115821838, "relation": 0.1681357678025961}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0929077863693237, "official": false}, "train_seconds": 0.09297985304147005}
+Run 116/141: results/smoke-cuda-check/synthetic/seed-44/gcn/graphmixer/rkd_angle
+{"epoch": 1, "losses": {"total": 1.232854574918747, "task": 1.1100138425827026, "kd": 0.0006002858281135559, "relation": 0.12224046140909195}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0901442766189575, "official": false}, "train_seconds": 0.07582822814583778}
+Run 117/141: results/smoke-cuda-check/synthetic/seed-44/gcn/graphmixer/logit_standard
+{"epoch": 1, "losses": {"total": 2.13087660074234, "task": 1.11046701669693, "kd": 1.020409569144249, "relation": 0.0}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.088188648223877, "official": false}, "train_seconds": 0.05048745218664408}
+Run 118/141: results/smoke-cuda-check/synthetic/seed-44/gcn/graphmixer/nosmog_rsd
+{"epoch": 1, "losses": {"total": 3.475365549325943, "task": 1.1095731258392334, "kd": 0.0005925148725509644, "relation": 2.36519992351532}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.087721347808838, "official": false}, "train_seconds": 0.05149897653609514}
+Run 119/141: results/smoke-cuda-check/synthetic/seed-44/gcn/graphmixer/trd
+{"epoch": 1, "losses": {"total": 1.177361160516739, "task": 1.110071986913681, "logit": 0.000598713755607605, "rkd": 0.06669048161711544, "teacher_delta_energy": 0.008556158948825518, "student_delta_energy": 0.08360842630888025}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0896960496902466, "official": false}, "train_seconds": 0.07578523084521294}
+Run 120/141: results/smoke-cuda-check/synthetic/seed-44/sage/supervised
+{"epoch": 1, "losses": {"task": 1.0845444202423096}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0843603610992432, "official": false}, "train_seconds": 0.03363826684653759}
+Run 121/141: results/smoke-cuda-check/synthetic/seed-44/sage/tgn/logits
+{"epoch": 1, "losses": {"total": 1.0919650793075562, "task": 1.0846140682697296, "kd": 0.0073509737849235535, "relation": 0.0}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0849164724349976, "official": false}, "train_seconds": 0.05188591964542866}
+Run 122/141: results/smoke-cuda-check/synthetic/seed-44/sage/tgn/dkd
+{"epoch": 1, "losses": {"total": 1.0861732065677643, "task": 1.084577739238739, "kd": 0.0015954686750774272, "relation": 0.0}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.084467887878418, "official": false}, "train_seconds": 0.07546830642968416}
+Run 123/141: results/smoke-cuda-check/synthetic/seed-44/sage/tgn/rkd_distance
+{"epoch": 1, "losses": {"total": 1.2235364615917206, "task": 1.08487668633461, "kd": 0.0073595792055130005, "relation": 0.13130016066133976}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.084863543510437, "official": false}, "train_seconds": 0.09779209084808826}
+Run 124/141: results/smoke-cuda-check/synthetic/seed-44/sage/tgn/rkd_angle
+{"epoch": 1, "losses": {"total": 1.2295509278774261, "task": 1.0842629671096802, "kd": 0.0074136629700660706, "relation": 0.1378742754459381}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0850166082382202, "official": false}, "train_seconds": 0.08375683426856995}
+Run 125/141: results/smoke-cuda-check/synthetic/seed-44/sage/tgn/logit_standard
+{"epoch": 1, "losses": {"total": 1.731207251548767, "task": 1.0839362740516663, "kd": 0.6472709774971008, "relation": 0.0}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0840489864349365, "official": false}, "train_seconds": 0.0560817401856184}
+Run 126/141: results/smoke-cuda-check/synthetic/seed-44/sage/tgn/nosmog_rsd
+{"epoch": 1, "losses": {"total": 1.3546828925609589, "task": 1.0838775038719177, "kd": 0.00735868513584137, "relation": 0.26344668958336115}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0864359140396118, "official": false}, "train_seconds": 0.060987756587564945}
+Run 127/141: results/smoke-cuda-check/synthetic/seed-44/sage/tgn/trd
+{"epoch": 1, "losses": {"total": 1.1922000050544739, "task": 1.084551215171814, "logit": 0.007376648485660553, "rkd": 0.10027213953435421, "teacher_delta_energy": 0.14563838640848795, "student_delta_energy": 0.020869752392172813}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.085797905921936, "official": false}, "train_seconds": 0.0972202979028225}
+Run 128/141: results/smoke-cuda-check/synthetic/seed-44/sage/tgat/logits
+{"epoch": 1, "losses": {"total": 1.0959191620349884, "task": 1.0846455693244934, "kd": 0.01127355545759201, "relation": 0.0}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0848169326782227, "official": false}, "train_seconds": 0.05058600101619959}
+Run 129/141: results/smoke-cuda-check/synthetic/seed-44/sage/tgat/dkd
+{"epoch": 1, "losses": {"total": 1.0877573490142822, "task": 1.0846026539802551, "kd": 0.0031546875325147994, "relation": 0.0}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0845060348510742, "official": false}, "train_seconds": 0.059826288372278214}
+Run 130/141: results/smoke-cuda-check/synthetic/seed-44/sage/tgat/rkd_distance
+{"epoch": 1, "losses": {"total": 1.2140390574932098, "task": 1.0845493376255035, "kd": 0.011366359889507294, "relation": 0.11812333017587662}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0852769613265991, "official": false}, "train_seconds": 0.09677890688180923}
+Run 131/141: results/smoke-cuda-check/synthetic/seed-44/sage/tgat/rkd_angle
+{"epoch": 1, "losses": {"total": 1.2125034630298615, "task": 1.0841353237628937, "kd": 0.011419087648391724, "relation": 0.11694905906915665}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0862983465194702, "official": false}, "train_seconds": 0.0799087481573224}
+Run 132/141: results/smoke-cuda-check/synthetic/seed-44/sage/tgat/logit_standard
+{"epoch": 1, "losses": {"total": 1.7576702237129211, "task": 1.084583580493927, "kd": 0.6730866059660912, "relation": 0.0}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0827380418777466, "official": false}, "train_seconds": 0.054610748775303364}
+Run 133/141: results/smoke-cuda-check/synthetic/seed-44/sage/tgat/nosmog_rsd
+{"epoch": 1, "losses": {"total": 1.4365320801734924, "task": 1.0847722887992859, "kd": 0.011230580508708954, "relation": 0.3405291698873043}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0858116149902344, "official": false}, "train_seconds": 0.055031280033290386}
+Run 134/141: results/smoke-cuda-check/synthetic/seed-44/sage/tgat/trd
+{"epoch": 1, "losses": {"total": 1.116397738456726, "task": 1.0846071243286133, "logit": 0.011291109025478363, "rkd": 0.02049946167971939, "teacher_delta_energy": 0.012361711317983767, "student_delta_energy": 0.020764939409370225}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.084708333015442, "official": false}, "train_seconds": 0.0923257851973176}
+Run 135/141: results/smoke-cuda-check/synthetic/seed-44/sage/graphmixer/logits
+{"epoch": 1, "losses": {"total": 1.0908433198928833, "task": 1.0846293270587921, "kd": 0.006213963031768799, "relation": 0.0}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0848441123962402, "official": false}, "train_seconds": 0.059261126443743706}
+Run 136/141: results/smoke-cuda-check/synthetic/seed-44/sage/graphmixer/dkd
+{"epoch": 1, "losses": {"total": 1.0859772562980652, "task": 1.084582805633545, "kd": 0.0013944317033747211, "relation": 0.0}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.084472417831421, "official": false}, "train_seconds": 0.05952134821563959}
+Run 137/141: results/smoke-cuda-check/synthetic/seed-44/sage/graphmixer/rkd_distance
+{"epoch": 1, "losses": {"total": 1.1942507028579712, "task": 1.084725946187973, "kd": 0.006248869001865387, "relation": 0.10327587276697159}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.084345817565918, "official": false}, "train_seconds": 0.08986891712993383}
+Run 138/141: results/smoke-cuda-check/synthetic/seed-44/sage/graphmixer/rkd_angle
+{"epoch": 1, "losses": {"total": 1.1983262300491333, "task": 1.0839821100234985, "kd": 0.006304837763309479, "relation": 0.1080392524600029}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0854030847549438, "official": false}, "train_seconds": 0.08910973742604256}
+Run 139/141: results/smoke-cuda-check/synthetic/seed-44/sage/graphmixer/logit_standard
+{"epoch": 1, "losses": {"total": 1.8495209217071533, "task": 1.0844910144805908, "kd": 0.7650298997759819, "relation": 0.0}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0848662853240967, "official": false}, "train_seconds": 0.05786016769707203}
+Run 140/141: results/smoke-cuda-check/synthetic/seed-44/sage/graphmixer/nosmog_rsd
+{"epoch": 1, "losses": {"total": 2.8147110641002655, "task": 1.083470493555069, "kd": 0.006220176815986633, "relation": 1.7250203266739845}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.0872290134429932, "official": false}, "train_seconds": 0.05404046457260847}
+Run 141/141: results/smoke-cuda-check/synthetic/seed-44/sage/graphmixer/trd
+{"epoch": 1, "losses": {"total": 1.1002941727638245, "task": 1.084667980670929, "logit": 0.00620637834072113, "rkd": 0.009419812704436481, "teacher_delta_energy": 0.008556158948825518, "student_delta_energy": 0.020800420936817925}, "validation": {"mrr": 0.7083333730697632, "hits@1": 0.5, "hits@3": 1.0, "metric": "mrr", "loss": 1.084674596786499, "official": false}, "train_seconds": 0.08106101024895906}

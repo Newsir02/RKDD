@@ -1,0 +1,21 @@
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple
+Collecting pytest<10,>=7
+  Downloading https://mirrors.aliyun.com/pypi/packages/51/39/1f5d8c8877a0fa327db959c19341d4be61660de1ab6b7391f9eb805bcd67/pytest-9.2.0-py3-none-any.whl (411 kB)
+Collecting exceptiongroup>=1 (from pytest<10,>=7)
+  Downloading https://mirrors.aliyun.com/pypi/packages/8a/0e/97c33bf5009bdbac74fd2beace167cab3f978feb69cc36f1ef79360d6c4e/exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+Collecting iniconfig>=2 (from pytest<10,>=7)
+  Downloading https://mirrors.aliyun.com/pypi/packages/56/43/4ca9e49d27a1fcf6bece6f6aec0ea46bb9112489b93d4b688fb415457bdb/iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Collecting packaging>=24 (from pytest<10,>=7)
+  Downloading https://mirrors.aliyun.com/pypi/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl (129 kB)
+Collecting pluggy<2,>=1.6 (from pytest<10,>=7)
+  Downloading https://mirrors.aliyun.com/pypi/packages/40/9e/2b38731e0fc536806f16490e1a12d7f0dc2a1235aa8cc07bcc75416a7daa/pluggy-1.7.0-py3-none-any.whl (27 kB)
+Collecting pygments>=2.15 (from pytest<10,>=7)
+  Downloading https://mirrors.aliyun.com/pypi/packages/71/46/17f022dd3e953bf20a04a028a21ec746d942f8d2af30fa0f124fa0e6a684/pygments-2.21.0-py3-none-any.whl (1.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 1.2 MB/s  0:00:00
+Collecting tomli>=2 (from pytest<10,>=7)
+  Downloading https://mirrors.aliyun.com/pypi/packages/60/3f/3e3f8fd0919249b0200c80fbc4f9a1e70be19f9883da71dfb7f8b9ab8aca/tomli-2.5.0-py3-none-any.whl (14 kB)
+Collecting typing-extensions>=4.6.0 (from exceptiongroup>=1->pytest<10,>=7)
+  Downloading https://mirrors.aliyun.com/pypi/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Installing collected packages: typing-extensions, tomli, pygments, pluggy, packaging, iniconfig, exceptiongroup, pytest
+
+Successfully installed exceptiongroup-1.3.1 iniconfig-2.3.1 packaging-26.3 pluggy-1.7.0 pygments-2.21.0 pytest-9.2.0 tomli-2.5.0 typing-extensions-4.16.0

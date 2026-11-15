@@ -1,0 +1,21 @@
+[
+  {
+    "dataset": "tgbl-review",
+    "backend_name": "tgbl-review",
+    "dataset_version": 2,
+    "py_tgb": "2.2.0",
+    "nodes": 352637,
+    "events": 4873540,
+    "train": 3413837,
+    "val": 730784,
+    "test": 728919,
+    "metric": "mrr",
+    "official": true,
+    "data_signature": "20ab4e59972c0b7a48ac17134784ea1aa4ebc8da3a3aad76690d3c53e1151a3a",
+    "time_scale": {
+      "origin": 929232000.0,
+      "span": 535593600.0
+    },
+    "negative_file_sha256": {}
+  }
+]

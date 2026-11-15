@@ -1,0 +1,21 @@
+[
+  {
+    "dataset": "tgbl-flight",
+    "backend_name": "tgbl-flight",
+    "dataset_version": 2,
+    "py_tgb": "2.2.0",
+    "nodes": 18143,
+    "events": 67169570,
+    "train": 47043612,
+    "val": 10099015,
+    "test": 10026943,
+    "metric": "mrr",
+    "official": true,
+    "data_signature": "511cc35142e1241efeabdd465410d626db3da1c48623e7d2780b3938c3751bee",
+    "time_scale": {
+      "origin": 1546318800.0,
+      "span": 91756800.0
+    },
+    "negative_file_sha256": {}
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "dataset": "tgbl-coin",
+    "backend_name": "tgbl-coin",
+    "dataset_version": 2,
+    "py_tgb": "2.2.0",
+    "nodes": 638486,
+    "events": 22809486,
+    "train": 15966659,
+    "val": 3421416,
+    "test": 3421411,
+    "metric": "mrr",
+    "official": true,
+    "data_signature": "a59d50be892e7772211498f1062cd0251ed6433cc1e5fc43c061b26b5402f777",
+    "time_scale": {
+      "origin": 1648811421.0,
+      "span": 13284796.0
+    },
+    "negative_file_sha256": {}
+  }
+]

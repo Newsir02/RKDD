@@ -1,0 +1,141 @@
+from __future__ import annotations
+
+from pathlib import Path
+
+import torch
+
+from dataset import (
+    STRUCTURE_FEATURE_DIM,
+    build_synthetic_temporal_graph,
+    compute_structure_features,
+)
+from train import build_student, main, parse_args
+
+
+def test_compute_structure_features_shape_and_determinism() -> None:
+    src = torch.tensor([0, 1, 0, 2, 1, 0])
+    dst = torch.tensor([1, 2, 2, 3, 3, 3])
+    train_mask = torch.tensor([True, True, True, True, False, False])
+
+    basic = compute_structure_features(src, dst, train_mask, num_rows=5)
+    rich = compute_structure_features(
+        src, dst, train_mask, num_rows=5, feature_set="rich"
+    )
+
+    assert basic.shape == (5, 5)
+    assert rich.shape == (5, STRUCTURE_FEATURE_DIM)
+    assert torch.isfinite(rich).all()
+    # 前 5 维与 basic 完全一致。
+    assert torch.allclose(rich[:, :5], basic)
+    # 从未在训练集出现过的节点特征应为标准化后的 0。
+    assert torch.allclose(rich[4], torch.zeros(STRUCTURE_FEATURE_DIM))
+
+
+def test_structure_features_do_not_change_node_features() -> None:
+    bundle = build_synthetic_temporal_graph(
+        num_nodes=12,
+        num_events=20,
+        feature_dim=4,
+        edge_feature_dim=2,
+        seed=11,
+        structure_feature_set="rich",
+    )
+
+    assert bundle.structure_features is not None
+    assert bundle.structure_features.shape == (
+        bundle.node_features.size(0),
+        STRUCTURE_FEATURE_DIM,
+    )
+
+
+def test_nbr_feature_set_shape() -> None:
+    bundle = build_synthetic_temporal_graph(
+        num_nodes=12,
+        num_events=20,
+        feature_dim=4,
+        edge_feature_dim=2,
+        seed=11,
+        structure_feature_set="nbr",
+    )
+
+    assert bundle.structure_features.shape == (12, 5 + 4)
+    assert torch.isfinite(bundle.structure_features).all()
+
+    bundle2 = build_synthetic_temporal_graph(
+        num_nodes=12,
+        num_events=20,
+        feature_dim=4,
+        edge_feature_dim=2,
+        seed=11,
+        structure_feature_set="nbr2",
+    )
+    assert bundle2.structure_features.shape == (12, 5 + 2 * 4)
+
+
+def test_build_student_concatenates_structure_features() -> None:
+    bundle = build_synthetic_temporal_graph(
+        num_nodes=12,
+        num_events=20,
+        feature_dim=4,
+        edge_feature_dim=2,
+        num_candidates=3,
+        seed=11,
+        structure_feature_set="rich",
+    )
+    args = parse_args(["--dataset", "synthetic", "--structure-features"])
+
+    student = build_student(
+        bundle.node_features,
+        args,
+        bundle.structure_features,
+    )
+
+    assert student.model_config["node_feature_dim"] == 4 + STRUCTURE_FEATURE_DIM
+
+
+def test_structure_features_end_to_end(
+    tmp_path: Path,
+) -> None:
+    main(
+        [
+            "--dataset",
+            "synthetic",
+            "--quick",
+            "--stage",
+            "all",
+            "--structure-features",
+            "--num-nodes",
+            "12",
+            "--num-events",
+            "20",
+            "--num-candidates",
+            "3",
+            "--feature-dim",
+            "4",
+            "--edge-feature-dim",
+            "2",
+            "--history-size",
+            "2",
+            "--temporal-neighbors",
+            "2",
+            "--batch-size",
+            "4",
+            "--teacher-hidden",
+            "8",
+            "--student-hidden",
+            "8",
+            "--time-dim",
+            "4",
+            "--relation-dim",
+            "8",
+            "--relation-slots",
+            "3",
+            "--dropout",
+            "0",
+            "--output-dir",
+            str(tmp_path),
+        ]
+    )
+
+    assert (tmp_path / "teacher.pt").is_file()
+    assert (tmp_path / "student.pt").is_file()

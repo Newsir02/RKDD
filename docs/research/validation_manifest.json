@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-14",
+  "pytest_passed": 126,
+  "formal_jobs_planned": 705,
+  "real_data_runs": 0,
+  "synthetic_validation": [
+    {
+      "directory": "results\\verified-final-cpu",
+      "runs": 141,
+      "groups": 47,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "source_hash": "a5c4095c99d3c1bf74759c5ba9c1b10dd79f68d67259a55f6d9560e53a254f24",
+      "environment": {
+        "python": "3.10.15",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "device": "cpu",
+        "packages": {
+          "torch": "2.1.0",
+          "torch-geometric": "2.6.1",
+          "numpy": "1.26.4",
+          "py-tgb": "2.2.0"
+        },
+        "gpu": null
+      },
+      "official": false,
+      "all_checkpoint_hashes_match": true
+    },
+    {
+      "directory": "results\\verified-final-cuda",
+      "runs": 141,
+      "groups": 47,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "source_hash": "a5c4095c99d3c1bf74759c5ba9c1b10dd79f68d67259a55f6d9560e53a254f24",
+      "environment": {
+        "python": "3.10.15",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "device": "cuda",
+        "packages": {
+          "torch": "2.1.0",
+          "torch-geometric": "2.6.1",
+          "numpy": "1.26.4",
+          "py-tgb": "2.2.0"
+        },
+        "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+      },
+      "official": false,
+      "all_checkpoint_hashes_match": true
+    }
+  ]
+}

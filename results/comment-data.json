@@ -1,0 +1,24 @@
+[
+  {
+    "dataset": "tgbl-comment",
+    "backend_name": "tgbl-comment",
+    "dataset_version": 1,
+    "py_tgb": "2.2.0",
+    "nodes": 994790,
+    "events": 44314507,
+    "train": 31020155,
+    "val": 6647176,
+    "test": 6647176,
+    "metric": "mrr",
+    "official": true,
+    "data_signature": "1bdc0013013f1b79f94940113e6ca45f158e735ca6d10c477e3e07c7659f779c",
+    "time_scale": {
+      "origin": 1134365188.0,
+      "span": 148504096.0
+    },
+    "negative_file_sha256": {
+      "datasets/tgbl_comment/tgbl-comment_test_ns.pkl": "11cab9edd8154b0115ab6f5af85bed5173284cb2c3a6b051d8c8b78380d8dc98",
+      "datasets/tgbl_comment/tgbl-comment_val_ns.pkl": "2294e129a064c8c986726ca6e0089a033eb248d350922649065def8908c748fa"
+    }
+  }
+]
