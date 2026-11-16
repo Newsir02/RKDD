@@ -79,6 +79,8 @@ def parse_args(argv=None):
     parser.add_argument("--student-node-ids", action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument("--score-delta-gate", action="store_true")
     parser.add_argument("--structure-mode", choices=("temporal", "zero"), default="temporal")
+    parser.add_argument("--structure-evidence", choices=("path", "random"), default="path")
+    parser.add_argument("--structure-reference", choices=("next", "random", "hard"), default="next")
     parser.add_argument("--quick", action="store_true")
     parser.add_argument("--no-tgb-download", dest="tgb_download", action="store_false", default=True)
     for name, default in {"seed":42, "batch_size":128, "num_candidates":16,
@@ -150,11 +152,13 @@ def parse_args(argv=None):
         parser.error("structure_huber_beta must be finite and positive")
     if base.structure_mode == "zero" and base.benchmark_method != "structure_interaction":
         parser.error("structure_mode zero requires --method structure_interaction")
-    if base.benchmark_method == "structure_interaction":
+    if base.benchmark_method in ("structure_interaction", "structure_logits"):
         if base.stage != "distill" or base.student_model != "gcn" or base.student_blocks < 2:
-            parser.error("Structure interaction requires distill stage and a GCN with at least two layers")
+            parser.error("Structure methods require distill stage and a GCN with at least two layers")
         if base.relation_weight <= 0:
-            parser.error("Structure interaction requires positive relation_weight")
+            parser.error("Structure methods require positive relation_weight")
+    elif base.structure_evidence != "path" or base.structure_reference != "next":
+        parser.error("structure_evidence/reference require a structure method")
     return base
 
 
@@ -277,7 +281,7 @@ def run(args):
             losses = {"task": train.train_teacher_epoch(model, training, optimizer, device, args.grad_clip)}
         elif teacher is None:
             losses = {"task": train.train_supervised_student_epoch(model, training, optimizer, device, args.grad_clip)}
-        elif args.benchmark_method == "structure_interaction":
+        elif args.benchmark_method in ("structure_interaction", "structure_logits"):
             losses = train_structure_epoch(model, teacher, objective, training, optimizer, device, args, epoch)
         else:
             model.return_structure = args.benchmark_method == "dyngkd_structure"
@@ -354,12 +358,15 @@ def run(args):
               "latency": latency, "environment": {"python": platform.python_version(),
                   "platform": platform.platform(), "device": str(device), "packages": packages,
                   "gpu": torch.cuda.get_device_name(device) if device.type == "cuda" else None}}
-    if args.benchmark_method == "structure_interaction":
+    if args.benchmark_method in ("structure_interaction", "structure_logits"):
         result["structure_intervention"] = {
             "teacher_scope": "explicit_neighborhood_fixed_memory" if args.teacher_arch == "tgn"
                              else "explicit_neighborhood_no_refill",
             "student_scope": "locked_recent_k_no_refill",
+            "objective": objective.kind,
             "mode": args.structure_mode,
+            "evidence": args.structure_evidence,
+            "reference": args.structure_reference,
             "last_epoch_eligible_fraction": losses["eligible_fraction"],
             "last_epoch_distilled_fraction": losses["distilled_fraction"],
         }

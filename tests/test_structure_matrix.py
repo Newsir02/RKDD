@@ -61,6 +61,25 @@ def test_supplemental_runs_reuse_main_and_compare_new_method_only():
         }
 
 
+def test_structure_logits_control_is_a_distinct_structure_method():
+    from benchmark import parse_args
+
+    args = parse_args([
+        "--stage", "distill", "--method", "structure_logits", "--dataset", "synthetic",
+        "--student-model", "gcn", "--teacher-checkpoint", "unused.pt",
+        "--structure-evidence", "random", "--structure-reference", "hard",
+    ])
+    assert args.benchmark_method == "structure_logits"
+    assert args.structure_evidence == "random"
+    assert args.structure_reference == "hard"
+    with pytest.raises(SystemExit):
+        parse_args([
+            "--stage", "distill", "--method", "structure_logits", "--dataset", "synthetic",
+            "--student-model", "gcn", "--teacher-checkpoint", "unused.pt",
+            "--structure-mode", "zero",
+        ])
+
+
 def test_structure_design_rejects_scope_drift():
     config = load_config("structure_smoke.json")
     with pytest.raises(ValueError, match="subset"):

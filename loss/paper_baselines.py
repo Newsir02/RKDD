@@ -9,7 +9,7 @@ from torch.nn import functional as F
 from .kd import logit_kd_loss
 from .temporal_delta import TemporalDeltaDistillation
 from .score_delta import ScoreDeltaDistillation
-from .structure_interaction import StructureInteractionObjective
+from .structure_interaction import StructureInteractionObjective, StructureLogitObjective
 from .temporal_paper_adaptations import TEMPORAL_PAPER_METHODS, TemporalPaperObjective
 
 
@@ -135,14 +135,18 @@ class PaperObjective(nn.Module):
 
 
 METHODS = ("supervised", "logits", "dkd", "rkd_distance", "rkd_angle",
-           "logit_standard", "nosmog_rsd", "trd", "trd_score", "structure_interaction") + TEMPORAL_PAPER_METHODS
+           "logit_standard", "nosmog_rsd", "trd", "trd_score",
+           "structure_interaction", "structure_logits") + TEMPORAL_PAPER_METHODS
 
 
 def make_objective(method, student_dim, teacher_dim, temperature=2.0,
                    kd_weight=1.0, relation_weight=1.0, trd_mode="temporal", score_delta_warmup=0,
                    score_delta_gate=False, *, structure_mode="temporal", structure_huber_beta=1.):
     if method == "structure_interaction":
-        return StructureInteractionObjective(relation_weight, structure_mode, structure_huber_beta)
+        return StructureInteractionObjective(relation_weight, structure_mode, structure_huber_beta,
+                                             kd_weight=kd_weight, temperature=temperature)
+    if method == "structure_logits":
+        return StructureLogitObjective(relation_weight, temperature)
     if method in TEMPORAL_PAPER_METHODS:
         return TemporalPaperObjective(method, student_dim, teacher_dim, temperature, kd_weight, relation_weight)
     if method == "trd":
