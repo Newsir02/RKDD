@@ -1,0 +1,242 @@
+[
+  {
+    "method": "structure_interaction",
+    "evidence": "path",
+    "reference": "hard",
+    "mode": "temporal",
+    "kd_weight": 1.0,
+    "n": 1,
+    "seeds": "42",
+    "test_mean": 0.4451005245584999,
+    "test_std": null,
+    "test_values": [
+      0.4451005245584999
+    ],
+    "val_mean": 0.5195950737000824,
+    "best_epochs": [
+      19
+    ],
+    "runs": [
+      {
+        "seed": 42,
+        "test": 0.4451005245584999,
+        "best_val": 0.5195950737000824,
+        "best_epoch": 19,
+        "epochs": 39,
+        "train_seconds": 7881.98229738418,
+        "path": "results/structure-diagnostics/wiki-seed42-kd1-hard-reference"
+      }
+    ]
+  },
+  {
+    "method": "structure_interaction",
+    "evidence": "path",
+    "reference": "next",
+    "mode": "temporal",
+    "kd_weight": 0.0,
+    "n": 1,
+    "seeds": "42",
+    "test_mean": 0.43920259398297756,
+    "test_std": null,
+    "test_values": [
+      0.43920259398297756
+    ],
+    "val_mean": 0.5096932694777392,
+    "best_epochs": [
+      10
+    ],
+    "runs": [
+      {
+        "seed": 42,
+        "test": 0.43920259398297756,
+        "best_val": 0.5096932694777392,
+        "best_epoch": 10,
+        "epochs": 30,
+        "train_seconds": 4350.121862155385,
+        "path": "results/structure-diagnostics/wiki-seed42-kd0-path-next"
+      }
+    ]
+  },
+  {
+    "method": "structure_interaction",
+    "evidence": "path",
+    "reference": "next",
+    "mode": "temporal",
+    "kd_weight": 1.0,
+    "n": 3,
+    "seeds": "42,43,44",
+    "test_mean": 0.4490086601934664,
+    "test_std": 0.008629039588985206,
+    "test_values": [
+      0.45194218294004307,
+      0.4392953142271625,
+      0.45578848341319367
+    ],
+    "val_mean": 0.523509141155683,
+    "best_epochs": [
+      21,
+      25,
+      39
+    ],
+    "runs": [
+      {
+        "seed": 42,
+        "test": 0.45194218294004307,
+        "best_val": 0.5274702634542362,
+        "best_epoch": 21,
+        "epochs": 41,
+        "train_seconds": 6391.586818390526,
+        "path": "results/structure-diagnostics/wiki-seed42-kd1-path-next"
+      },
+      {
+        "seed": 43,
+        "test": 0.4392953142271625,
+        "best_val": 0.5162421472647979,
+        "best_epoch": 25,
+        "epochs": 45,
+        "train_seconds": 9174.317761394195,
+        "path": "results/structure-diagnostics/wiki-seed43-kd1-path-next"
+      },
+      {
+        "seed": 44,
+        "test": 0.45578848341319367,
+        "best_val": 0.5268150127480149,
+        "best_epoch": 39,
+        "epochs": 59,
+        "train_seconds": 13835.791401051916,
+        "path": "results/structure-diagnostics/wiki-seed44-kd1-path-next"
+      }
+    ]
+  },
+  {
+    "method": "structure_interaction",
+    "evidence": "path",
+    "reference": "random",
+    "mode": "temporal",
+    "kd_weight": 1.0,
+    "n": 3,
+    "seeds": "42,43,44",
+    "test_mean": 0.45685012649709017,
+    "test_std": 0.005450896360852703,
+    "test_values": [
+      0.4618160856435038,
+      0.4577162824024615,
+      0.4510180114453053
+    ],
+    "val_mean": 0.5249600412098515,
+    "best_epochs": [
+      24,
+      10,
+      14
+    ],
+    "runs": [
+      {
+        "seed": 42,
+        "test": 0.4618160856435038,
+        "best_val": 0.5356275633101171,
+        "best_epoch": 24,
+        "epochs": 44,
+        "train_seconds": 8909.114983232692,
+        "path": "results/structure-diagnostics/wiki-seed42-kd1-random-reference"
+      },
+      {
+        "seed": 43,
+        "test": 0.4577162824024615,
+        "best_val": 0.5203815548535176,
+        "best_epoch": 10,
+        "epochs": 30,
+        "train_seconds": 4002.7506846301258,
+        "path": "results/structure-diagnostics/wiki-seed43-kd1-random-reference"
+      },
+      {
+        "seed": 44,
+        "test": 0.4510180114453053,
+        "best_val": 0.5188710054659198,
+        "best_epoch": 14,
+        "epochs": 34,
+        "train_seconds": 4581.232509441674,
+        "path": "results/structure-diagnostics/wiki-seed44-kd1-random-reference"
+      }
+    ]
+  },
+  {
+    "method": "structure_interaction",
+    "evidence": "random",
+    "reference": "next",
+    "mode": "temporal",
+    "kd_weight": 1.0,
+    "n": 3,
+    "seeds": "42,43,44",
+    "test_mean": 0.4500584593086808,
+    "test_std": 0.006577604857277701,
+    "test_values": [
+      0.45619273914635483,
+      0.4431128088750569,
+      0.45086982990463076
+    ],
+    "val_mean": 0.5250504193427893,
+    "best_epochs": [
+      20,
+      29,
+      35
+    ],
+    "runs": [
+      {
+        "seed": 42,
+        "test": 0.45619273914635483,
+        "best_val": 0.5226527745350472,
+        "best_epoch": 20,
+        "epochs": 40,
+        "train_seconds": 8129.390433706343,
+        "path": "results/structure-diagnostics/wiki-seed42-kd1-random-evidence"
+      },
+      {
+        "seed": 43,
+        "test": 0.4431128088750569,
+        "best_val": 0.5220932362102381,
+        "best_epoch": 29,
+        "epochs": 49,
+        "train_seconds": 6715.521279284731,
+        "path": "results/structure-diagnostics/wiki-seed43-kd1-random-evidence"
+      },
+      {
+        "seed": 44,
+        "test": 0.45086982990463076,
+        "best_val": 0.5304052472830827,
+        "best_epoch": 35,
+        "epochs": 55,
+        "train_seconds": 7745.928174957633,
+        "path": "results/structure-diagnostics/wiki-seed44-kd1-random-evidence"
+      }
+    ]
+  },
+  {
+    "method": "structure_logits",
+    "evidence": "path",
+    "reference": "next",
+    "mode": "temporal",
+    "kd_weight": 0.0,
+    "n": 1,
+    "seeds": "42",
+    "test_mean": 0.43061899454458463,
+    "test_std": null,
+    "test_values": [
+      0.43061899454458463
+    ],
+    "val_mean": 0.5071824638049851,
+    "best_epochs": [
+      20
+    ],
+    "runs": [
+      {
+        "seed": 42,
+        "test": 0.43061899454458463,
+        "best_val": 0.5071824638049851,
+        "best_epoch": 20,
+        "epochs": 40,
+        "train_seconds": 5470.5282026827335,
+        "path": "results/structure-diagnostics/wiki-seed42-structure-logits"
+      }
+    ]
+  }
+]

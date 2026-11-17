@@ -1,0 +1,656 @@
+{
+  "config": "results/structure-main/ablation/tgbl-wiki/seed-42/gcn/tgn/zero/job.json",
+  "student_checkpoint": "results/structure-main/ablation/tgbl-wiki/seed-42/gcn/tgn/zero/student.pt",
+  "teacher_checkpoint": "results/structure-main/main/tgbl-wiki/seed-42/teacher-tgn/teacher.pt",
+  "evidence": "path",
+  "reference": "next",
+  "batches": 50,
+  "queries": 6400,
+  "eligible": 103,
+  "selected": 77,
+  "coverage": {
+    "eligible_fraction": 0.01609375,
+    "distilled_fraction": 0.01203125
+  },
+  "teacher_interaction": {
+    "count": 77,
+    "mean": 0.07110597715749369,
+    "std": 0.38508805359041887,
+    "min": -0.32968568801879883,
+    "max": 2.560993194580078,
+    "energy": 0.15334886900557934,
+    "nonzero_fraction": 0.9740259647369385,
+    "positive_fraction": 0.5194805264472961
+  },
+  "student_interaction": {
+    "count": 77,
+    "mean": 0.08787814982525714,
+    "std": 0.21695430321631365,
+    "min": -0.6426496505737305,
+    "max": 0.9513139724731445,
+    "energy": 0.05479173890078649,
+    "nonzero_fraction": 1.0,
+    "positive_fraction": 0.6623376607894897
+  },
+  "correlation": -0.006233682418443975,
+  "sign_agreement": 0.5584415793418884,
+  "mean_absolute_error": 0.23487301170825958,
+  "pairs": [
+    {
+      "batch": 12,
+      "row": 71,
+      "teacher_interaction": -0.05454754829406738,
+      "student_interaction": 0.08257770538330078,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 13,
+      "row": 4,
+      "teacher_interaction": 0.011090993881225586,
+      "student_interaction": 0.029430389404296875,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 13,
+      "row": 110,
+      "teacher_interaction": 0.011090993881225586,
+      "student_interaction": 0.02942943572998047,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 16,
+      "row": 71,
+      "teacher_interaction": 0.0,
+      "student_interaction": -0.21020030975341797,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 16,
+      "row": 123,
+      "teacher_interaction": -0.0020341873168945312,
+      "student_interaction": -0.056774139404296875,
+      "a_events": 2,
+      "b_events": 2
+    },
+    {
+      "batch": 16,
+      "row": 122,
+      "teacher_interaction": -0.0020351409912109375,
+      "student_interaction": -0.06776762008666992,
+      "a_events": 2,
+      "b_events": 2
+    },
+    {
+      "batch": 18,
+      "row": 53,
+      "teacher_interaction": -9.5367431640625e-05,
+      "student_interaction": 0.018369674682617188,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 19,
+      "row": 10,
+      "teacher_interaction": 0.43085336685180664,
+      "student_interaction": -0.02077770233154297,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 19,
+      "row": 101,
+      "teacher_interaction": 0.004525184631347656,
+      "student_interaction": 0.07228851318359375,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 21,
+      "row": 64,
+      "teacher_interaction": -0.26719075441360474,
+      "student_interaction": 0.38345766067504883,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 23,
+      "row": 12,
+      "teacher_interaction": -0.015739917755126953,
+      "student_interaction": 0.539301872253418,
+      "a_events": 1,
+      "b_events": 2
+    },
+    {
+      "batch": 23,
+      "row": 122,
+      "teacher_interaction": 0.017255783081054688,
+      "student_interaction": 0.17971515655517578,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 23,
+      "row": 121,
+      "teacher_interaction": 0.01725482940673828,
+      "student_interaction": 0.18202495574951172,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 24,
+      "row": 110,
+      "teacher_interaction": 0.0662240982055664,
+      "student_interaction": 0.060614585876464844,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 25,
+      "row": 27,
+      "teacher_interaction": 2.560993194580078,
+      "student_interaction": -0.1684556007385254,
+      "a_events": 2,
+      "b_events": 1
+    },
+    {
+      "batch": 26,
+      "row": 34,
+      "teacher_interaction": 0.0012135505676269531,
+      "student_interaction": 0.19511032104492188,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 26,
+      "row": 42,
+      "teacher_interaction": 0.0012111663818359375,
+      "student_interaction": 0.17949962615966797,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 27,
+      "row": 17,
+      "teacher_interaction": -2.384185791015625e-07,
+      "student_interaction": 0.035696983337402344,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 27,
+      "row": 33,
+      "teacher_interaction": 0.012282788753509521,
+      "student_interaction": 0.06622505187988281,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 27,
+      "row": 113,
+      "teacher_interaction": 0.030470967292785645,
+      "student_interaction": 0.030386924743652344,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 29,
+      "row": 12,
+      "teacher_interaction": 0.018587827682495117,
+      "student_interaction": 0.18439531326293945,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 29,
+      "row": 50,
+      "teacher_interaction": 0.018587589263916016,
+      "student_interaction": 0.17788362503051758,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 30,
+      "row": 96,
+      "teacher_interaction": -0.15740633010864258,
+      "student_interaction": 0.1456451416015625,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 31,
+      "row": 58,
+      "teacher_interaction": -0.32968568801879883,
+      "student_interaction": -0.6426496505737305,
+      "a_events": 2,
+      "b_events": 2
+    },
+    {
+      "batch": 31,
+      "row": 50,
+      "teacher_interaction": -0.018758296966552734,
+      "student_interaction": 0.1582021713256836,
+      "a_events": 1,
+      "b_events": 2
+    },
+    {
+      "batch": 31,
+      "row": 2,
+      "teacher_interaction": 0.023500919342041016,
+      "student_interaction": -0.056220054626464844,
+      "a_events": 2,
+      "b_events": 1
+    },
+    {
+      "batch": 31,
+      "row": 103,
+      "teacher_interaction": 0.022072315216064453,
+      "student_interaction": -0.00933694839477539,
+      "a_events": 2,
+      "b_events": 1
+    },
+    {
+      "batch": 32,
+      "row": 53,
+      "teacher_interaction": -0.036130666732788086,
+      "student_interaction": -0.03906536102294922,
+      "a_events": 1,
+      "b_events": 2
+    },
+    {
+      "batch": 32,
+      "row": 42,
+      "teacher_interaction": 0.030594825744628906,
+      "student_interaction": 0.1516551971435547,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 32,
+      "row": 68,
+      "teacher_interaction": 0.034512877464294434,
+      "student_interaction": 0.2443227767944336,
+      "a_events": 2,
+      "b_events": 1
+    },
+    {
+      "batch": 32,
+      "row": 50,
+      "teacher_interaction": 0.0798872709274292,
+      "student_interaction": 0.5544886589050293,
+      "a_events": 1,
+      "b_events": 2
+    },
+    {
+      "batch": 33,
+      "row": 2,
+      "teacher_interaction": -0.008625984191894531,
+      "student_interaction": 0.03440237045288086,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 33,
+      "row": 13,
+      "teacher_interaction": 7.152557373046875e-07,
+      "student_interaction": 0.032135009765625,
+      "a_events": 2,
+      "b_events": 1
+    },
+    {
+      "batch": 34,
+      "row": 108,
+      "teacher_interaction": -0.017871856689453125,
+      "student_interaction": 0.22616100311279297,
+      "a_events": 2,
+      "b_events": 1
+    },
+    {
+      "batch": 34,
+      "row": 88,
+      "teacher_interaction": -0.0024782419204711914,
+      "student_interaction": 0.2506837844848633,
+      "a_events": 2,
+      "b_events": 1
+    },
+    {
+      "batch": 34,
+      "row": 92,
+      "teacher_interaction": -0.002478361129760742,
+      "student_interaction": 0.2477874755859375,
+      "a_events": 2,
+      "b_events": 1
+    },
+    {
+      "batch": 34,
+      "row": 106,
+      "teacher_interaction": -0.27585363388061523,
+      "student_interaction": 0.8541412353515625,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 35,
+      "row": 1,
+      "teacher_interaction": 0.003353118896484375,
+      "student_interaction": 0.14815044403076172,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 35,
+      "row": 93,
+      "teacher_interaction": -0.2555718421936035,
+      "student_interaction": -0.14630985260009766,
+      "a_events": 2,
+      "b_events": 2
+    },
+    {
+      "batch": 35,
+      "row": 61,
+      "teacher_interaction": -0.25557398796081543,
+      "student_interaction": -0.14543437957763672,
+      "a_events": 2,
+      "b_events": 2
+    },
+    {
+      "batch": 35,
+      "row": 113,
+      "teacher_interaction": 0.10801315307617188,
+      "student_interaction": 0.9513139724731445,
+      "a_events": 2,
+      "b_events": 1
+    },
+    {
+      "batch": 36,
+      "row": 59,
+      "teacher_interaction": -0.25221920013427734,
+      "student_interaction": -0.005405426025390625,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 36,
+      "row": 15,
+      "teacher_interaction": 0.11350631713867188,
+      "student_interaction": 0.30846309661865234,
+      "a_events": 2,
+      "b_events": 1
+    },
+    {
+      "batch": 36,
+      "row": 104,
+      "teacher_interaction": -0.004158973693847656,
+      "student_interaction": 0.08175086975097656,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 36,
+      "row": 42,
+      "teacher_interaction": -0.008272409439086914,
+      "student_interaction": 0.027604103088378906,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 37,
+      "row": 56,
+      "teacher_interaction": 0.005583763122558594,
+      "student_interaction": -0.0059261322021484375,
+      "a_events": 2,
+      "b_events": 2
+    },
+    {
+      "batch": 37,
+      "row": 50,
+      "teacher_interaction": 0.0,
+      "student_interaction": 0.038384437561035156,
+      "a_events": 2,
+      "b_events": 2
+    },
+    {
+      "batch": 37,
+      "row": 125,
+      "teacher_interaction": -0.013328075408935547,
+      "student_interaction": -0.0620875358581543,
+      "a_events": 2,
+      "b_events": 1
+    },
+    {
+      "batch": 37,
+      "row": 22,
+      "teacher_interaction": -0.004398345947265625,
+      "student_interaction": -0.11082124710083008,
+      "a_events": 2,
+      "b_events": 2
+    },
+    {
+      "batch": 38,
+      "row": 16,
+      "teacher_interaction": 0.0036468505859375,
+      "student_interaction": -0.0825815200805664,
+      "a_events": 2,
+      "b_events": 1
+    },
+    {
+      "batch": 38,
+      "row": 101,
+      "teacher_interaction": -0.11143755912780762,
+      "student_interaction": -0.11483597755432129,
+      "a_events": 1,
+      "b_events": 2
+    },
+    {
+      "batch": 39,
+      "row": 57,
+      "teacher_interaction": -0.018646240234375,
+      "student_interaction": 0.14171171188354492,
+      "a_events": 1,
+      "b_events": 2
+    },
+    {
+      "batch": 39,
+      "row": 55,
+      "teacher_interaction": -0.018646240234375,
+      "student_interaction": 0.1321702003479004,
+      "a_events": 1,
+      "b_events": 2
+    },
+    {
+      "batch": 39,
+      "row": 62,
+      "teacher_interaction": -0.018646240234375,
+      "student_interaction": 0.14571666717529297,
+      "a_events": 1,
+      "b_events": 2
+    },
+    {
+      "batch": 40,
+      "row": 12,
+      "teacher_interaction": 0.012078285217285156,
+      "student_interaction": -0.055342674255371094,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 41,
+      "row": 50,
+      "teacher_interaction": -0.22174501419067383,
+      "student_interaction": 0.2615547180175781,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 41,
+      "row": 41,
+      "teacher_interaction": 0.24138188362121582,
+      "student_interaction": -0.1399235725402832,
+      "a_events": 2,
+      "b_events": 2
+    },
+    {
+      "batch": 42,
+      "row": 91,
+      "teacher_interaction": 0.038991451263427734,
+      "student_interaction": 0.09496402740478516,
+      "a_events": 1,
+      "b_events": 2
+    },
+    {
+      "batch": 43,
+      "row": 125,
+      "teacher_interaction": -0.002810239791870117,
+      "student_interaction": -0.11716365814208984,
+      "a_events": 1,
+      "b_events": 2
+    },
+    {
+      "batch": 45,
+      "row": 80,
+      "teacher_interaction": 0.2042837142944336,
+      "student_interaction": 0.12738990783691406,
+      "a_events": 2,
+      "b_events": 1
+    },
+    {
+      "batch": 45,
+      "row": 121,
+      "teacher_interaction": 0.023812294006347656,
+      "student_interaction": -0.06077098846435547,
+      "a_events": 2,
+      "b_events": 2
+    },
+    {
+      "batch": 45,
+      "row": 90,
+      "teacher_interaction": 0.2042827606201172,
+      "student_interaction": -0.033776283264160156,
+      "a_events": 2,
+      "b_events": 1
+    },
+    {
+      "batch": 45,
+      "row": 78,
+      "teacher_interaction": 0.20428466796875,
+      "student_interaction": 0.1050252914428711,
+      "a_events": 2,
+      "b_events": 1
+    },
+    {
+      "batch": 46,
+      "row": 30,
+      "teacher_interaction": 0.0260009765625,
+      "student_interaction": 0.03307533264160156,
+      "a_events": 2,
+      "b_events": 1
+    },
+    {
+      "batch": 46,
+      "row": 26,
+      "teacher_interaction": 0.007807254791259766,
+      "student_interaction": -0.029424190521240234,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 46,
+      "row": 99,
+      "teacher_interaction": 0.044503211975097656,
+      "student_interaction": 0.38341331481933594,
+      "a_events": 2,
+      "b_events": 2
+    },
+    {
+      "batch": 46,
+      "row": 35,
+      "teacher_interaction": 0.04298734664916992,
+      "student_interaction": 0.0285491943359375,
+      "a_events": 1,
+      "b_events": 2
+    },
+    {
+      "batch": 47,
+      "row": 85,
+      "teacher_interaction": 1.1894583702087402,
+      "student_interaction": 0.2412395477294922,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 47,
+      "row": 46,
+      "teacher_interaction": 1.1894588470458984,
+      "student_interaction": 0.1934366226196289,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 47,
+      "row": 36,
+      "teacher_interaction": -0.012048959732055664,
+      "student_interaction": -0.05267047882080078,
+      "a_events": 2,
+      "b_events": 2
+    },
+    {
+      "batch": 47,
+      "row": 74,
+      "teacher_interaction": 1.1894588470458984,
+      "student_interaction": 0.23759937286376953,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 48,
+      "row": 38,
+      "teacher_interaction": 0.005907297134399414,
+      "student_interaction": 0.06398820877075195,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 48,
+      "row": 18,
+      "teacher_interaction": -0.025760650634765625,
+      "student_interaction": 0.10624027252197266,
+      "a_events": 1,
+      "b_events": 1
+    },
+    {
+      "batch": 49,
+      "row": 49,
+      "teacher_interaction": -0.13091754913330078,
+      "student_interaction": 0.16987228393554688,
+      "a_events": 1,
+      "b_events": 2
+    },
+    {
+      "batch": 49,
+      "row": 74,
+      "teacher_interaction": -0.13091802597045898,
+      "student_interaction": 0.07833385467529297,
+      "a_events": 1,
+      "b_events": 2
+    },
+    {
+      "batch": 49,
+      "row": 18,
+      "teacher_interaction": -0.09542703628540039,
+      "student_interaction": -0.20523881912231445,
+      "a_events": 2,
+      "b_events": 1
+    },
+    {
+      "batch": 49,
+      "row": 6,
+      "teacher_interaction": -0.0043926239013671875,
+      "student_interaction": -0.04040241241455078,
+      "a_events": 2,
+      "b_events": 1
+    }
+  ]
+}
